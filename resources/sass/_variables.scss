@@ -1,0 +1,50 @@
+// Body
+$body-bg: #f8fafc;
+
+// Typography
+$font-family-sans-serif: 'Nunito', sans-serif;
+$font-size-base: 0.9rem;
+$line-height-base: 1.6;
+
+// Colors
+$blue: #3490dc;
+$indigo: #6574cd;
+$purple: #9561e2;
+$pink: #f66d9b;
+$red: #e3342f;
+$orange: #ff4600;
+$yellow: #ffed4a;
+$green: #38c172;
+$teal: #4dc0b5;
+$cyan: #6cb2eb;
+
+.custom-control-input:checked ~ .custom-control-label::before {
+    color: #fff;
+    border-color: #ff4600 !important;
+    background-color: #ff4600 !important;
+}
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+) !default;
+
+$container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1140px,
+    xxl: 1340px
+) !default;
+
+$modal-xxl:                         1340px !default;
+$modal-xl:                          1140px !default;
+$modal-lg:                          800px !default;
+$modal-md:                          500px !default;
+$modal-sm:                          300px !default;
+
+

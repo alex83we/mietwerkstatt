@@ -1,0 +1,21 @@
+#kontakt {
+    a {
+        cursor: pointer;
+        text-decoration: none !important;
+        color: #ff4600;
+
+        &:link, &:visited {
+            cursor: pointer;
+            text-decoration: none !important;
+        }
+
+        &:hover {
+            color: rgba(255, 70, 0, 0.8) !important;
+        }
+
+        &[href^="tel"], &[href^="fax"] {
+            color: inherit;
+            text-decoration: none !important;
+        }
+    }
+}

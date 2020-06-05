@@ -1,0 +1,44 @@
+$orange: #ff4400;
+:root {
+    --orange: #ff4400 !important;
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+    color: #fff;
+    border-color: $orange !important;
+    background-color: $orange !important;
+}
+
+.btn-outline-orange {
+    color: $orange !important;
+    border-color: $orange !important;
+}
+
+.btn-outline-orange:hover {
+    color: #fff !important;
+    background-color: $orange !important;
+    border-color: $orange !important;
+}
+
+.btn-orange {
+    color: #fff !important;
+    background-color: $orange !important;
+    border-color: $orange !important;
+}
+
+.btn-orange:hover {
+    color: #fff;
+    background-color: rgba(253, 62, 28, 0.9) !important;
+    border-color: rgba(253, 62, 28, 0.8) !important;
+}
+
+// AdminLTE V3
+@import "~admin-lte/build/scss/AdminLTE";
+
+// fontawesome
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/brands";
+@import "~@fortawesome/fontawesome-free/scss/regular";
+@import "~@fortawesome/fontawesome-free/scss/v4-shims";
+@import "cookies";

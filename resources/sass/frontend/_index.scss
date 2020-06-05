@@ -1,0 +1,304 @@
+/* Öffnungszeiten */
+.section-öffnungszeiten {
+    box-sizing: border-box;
+    padding: 0 15px;
+    width: 100%;
+
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+
+    .textwidget span {
+        color: white;
+    }
+}
+
+.ttf-content-element {
+    margin-bottom: 35px;
+}
+
+.ttf-h3-white {
+    color: white;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.section-öffnungszeiten-erreichen-custom {
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+    background-color: #ff4600 !important;
+    box-sizing: border-box;
+    padding: 0 15px;
+    width: 100%;
+
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+
+    .textwidget span {
+        color: white;
+    }
+}
+
+.section-öffnungszeiten-telefon-custom {
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+    background-color: #F7F7F7 !important;
+}
+
+.section-öffnungszeiten-custom {
+    padding-top: 30px !important;
+    padding-bottom: 30px !important;
+    background-color: #e8e8e8 !important;
+}
+
+.card {
+    border: none;
+    margin-bottom: 2px;
+    .preis {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+        padding: 5px;
+        background: #ff4600;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 600;
+        transform: translate(10px, -30%);
+        -webkit-transform: translate(10px, -30%);
+        -moz-transform: translate(10px, -30%);
+        -ms-transform: translate(10px, -30%);
+        -o-transform: translate(10px, -30%);
+        -webkit-box-shadow: 0px -7px 10px -9px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px -7px 10px -9px rgba(0,0,0,0.75);
+        box-shadow: 0px -7px 10px -9px rgba(0,0,0,0.75);
+        &:after {
+            content: ' ';
+            position: absolute;
+            top: 100%;
+            right: 0;
+            border-top: 10px solid #ff4600;
+            border-right: 10px solid transparent;
+        }
+    }
+    .preis-value {
+        display: block;
+        white-space: nowrap;
+        background: #ff4600;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .new {
+        position: absolute;
+        top: 0;
+        left: -20px;
+        display: block;
+        padding: 5px;
+        background: #ff4400;
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: 600;
+        transform: translate(10px, -30%);
+        -webkit-transform: translate(10px, -30%);
+        -moz-transform: translate(10px, -30%);
+        -ms-transform: translate(10px, -30%);
+        -o-transform: translate(10px, -30%);
+        box-shadow: 0px -7px 10px -9px rgba(0, 0, 0, 0.75);
+        &:after {
+            position: absolute;
+            content: " ";
+            top: 100%;
+            left: 0px;
+            border-top: 10px solid #ff4400;
+            border-left: 10px solid transparent;
+        }
+    }
+
+    .new-value {
+        display: block;
+        white-space: nowrap;
+        background: #ff4600;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .card-title {
+        color: #ff4600;
+        font-weight: bold;
+        font-size: 16px;
+    }
+    .detail {
+        font-size: 14px;
+    }
+}
+
+.button_detail {
+    a {
+        text-decoration: none;
+        color: white;
+        &:hover {
+            color: rgba(255,255,255,0.8);
+        }
+    }
+    .button_unten {
+        background-color: #ff4600;
+        text-align: center;
+        padding: 5px;
+        border-radius: 0 0 .25rem .25rem;
+    }
+}
+
+/* Detailseite */
+.prime-color {
+    color: #ff4600;
+}
+
+.beschreibung {
+    float: left;
+    width: 100%;
+    padding: 20px 0 5px;
+    .prime-color {
+        color: #ff4600;
+    }
+    .dp-title-h1 {
+        font-size: 22px;
+        margin: 0 0 5px 0;
+    }
+    .dp-intern-nummer {
+        font-size: 14px;
+    }
+}
+
+.container-inner {
+    padding: 25px;
+}
+
+.container-content {
+    position: relative;
+    border: 1px solid #ccc;
+    background-color: #fdfdfd;
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100px;
+        height: 15px;
+        bottom: 8px;
+        left: 0;
+        box-shadow: 14px 14px 14px rgba(0, 0, 0, 0.3);
+        -webkit-box-shadow: 14px 14px 14px rgba(0, 0, 0, 0.3);
+        -webkit-transform: rotate(-5deg);
+        z-index: -1;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        width: 100px;
+        height: 15px;
+        bottom: 8px;
+        right: 0;
+        box-shadow: -14px 14px 14px rgba(0, 0, 0, 0.3);
+        -webkit-box-shadow: -14px 14px 14px rgba(0, 0, 0, 0.3);
+        -webkit-transform: rotate(5deg);
+        z-index: -1;
+    }
+}
+
+.dp-title-h2 {
+    font-size: 21px;
+}
+
+.ttf-row {
+    width: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.ttf-column {
+    float: left;
+    width: 100%;
+}
+
+.ttf-small-font {
+    font-size: 14px;
+    line-height: 18px;
+    margin: 0;
+}
+
+.platzhalter {
+    height: 30px;
+}
+
+.technik-preis-container {
+    .technik-preis{
+        font-size: 30px;
+        font-weight: bolder;
+    }
+}
+
+.technik-button-container {
+    margin-top: 40px;
+
+    #ttf-druck-off {
+        text-align: center;
+        display: inline-block;
+        background-color: #ff4600;
+        opacity: 0.95;
+        width: 200px;
+        margin-right: 10px;
+    }
+
+    #ttf-request-fahrzeuge {
+        text-align: center;
+        display: inline-block;
+        background-color: #404040;
+        opacity: 0.95;
+        width: 200px;
+        margin-right: 10px;
+    }
+}
+
+.technik-daten-liste-container {
+    .technik-daten-liste {
+        display: inline-flex;
+        margin-right: 60px;
+        > ul {
+            padding: 0 !important;
+            list-style: none !important;
+            > li {
+                padding: 0 !important;
+                list-style: none !important;
+            }
+        }
+    }
+}
+
+.technik-eigenschaften-container {
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+}
+
+.ttf_beschreibung-index {
+    font-weight: bolder;
+}
+

@@ -1,0 +1,39 @@
+.login-page, .register-page {
+    -ms-flex-align: center;
+    align-items: center;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 100vh;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.login-box {
+    width: 360px;
+}
+
+.register-box {
+    width: 720px;
+}
+
+.login-logo, .register-logo {
+    font-size: 1.9rem;
+    font-weight: 300;
+    margin-bottom: .9rem;
+    text-align: center;
+}
+
+.login-card-body, .register-card-body {
+    background: #fff;
+    border-top: 0;
+    color: #666;
+    padding: 20px;
+}
+
+.login-box-msg, .register-box-msg {
+    margin: 0;
+    padding: 0 20px 20px;
+    text-align: center;
+}

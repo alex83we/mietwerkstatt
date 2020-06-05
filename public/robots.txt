@@ -1,0 +1,11 @@
+User-agent: Googlebot-News
+User-agent: Googlebot-Image
+User-agent: Googlebot-Video
+Crawl-Delay: 5
+Disallow: /backend/
+Disallow: /verkauf/pdf/
+Disallow: /storage
+Disallow: /images/
+Disallow: /password/
+
+Sitemap: https://www.mietwerkstatt-rossleben.de/sitemap.xml
