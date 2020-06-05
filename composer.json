@@ -20,6 +20,7 @@
         "laravel/tinker": "^2.0",
         "laravel/ui": "^2.0",
         "mguinea/laravel-robots": "^2.0",
+        "simplesoftwareio/simple-qrcode": "^3.0",
         "spatie/laravel-activitylog": "^3.14",
         "spatie/laravel-cookie-consent": "^2.12",
         "spatie/laravel-sitemap": "^5.7",

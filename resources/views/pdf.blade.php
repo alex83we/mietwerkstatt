@@ -47,13 +47,13 @@
 <body>
 <div style="text-align: right;"><img src="images/logoWerkstatt.png" style="width: 250px;"></div>
 <h1>{{ $fahrzeuge->anzeigetext }}</h1>
-<table border="1" id="preisschild">
+<table id="preisschild">
     <tr>
         <th colspan="2">Technische Daten</th>
     </tr>
     <tr class="daten">
         <td colspan="2">
-            <table class="inner" border="1">
+            <table class="inner">
                 <tr>
                     <td class="tdwidth">Leistung kW (PS)</td>
                     <td class="tdwidth">{{ $fahrzeuge->kw .' (' . $fahrzeuge->ps .')'  }}</td>
@@ -92,7 +92,7 @@
     </tr>
     <tr id="ausstattung">
         <td colspan="2" class="ausstattung">
-            <table border="1" class="inneraus">
+            <table class="inneraus">
                 <tr>
                     <td class="tdwidth">
                         @if($ausstattung->anhaengerkupplung == true)
@@ -219,7 +219,8 @@
     </tr>
     <tr>
         <td colspan="2" class="description">{!! Str::limit($fahrzeuge->beschreibung, 1250) !!}<br><br>
-            Weitere Infos unter: {{ url($fahrzeuge->slug) }}
+            Weitere Infos unter: {{ url($fahrzeuge->slug) }}<br>
+            {{ $qrcode }}
         </td>
     </tr>
     <tr>
