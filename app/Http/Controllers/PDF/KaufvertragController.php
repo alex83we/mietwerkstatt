@@ -30,7 +30,7 @@ class KaufvertragController extends Controller
             'user' => Auth::user($fahrzeuge->user_id),
             'request' => $request,
         ];
-        dd($data);
+        dd($data, $request->all());
         $pdf = PDF::loadView('pdf/kaufvertrag/store', $data);
         $pdf->setPaper('A4', 'portrait');
         return $pdf->stream(date('d.m.Y').'_'.$fahrzeuge->slug.'_kaufvertrag.pdf');

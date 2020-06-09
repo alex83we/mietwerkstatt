@@ -430,7 +430,7 @@
                         <td>
                             <div style="border-bottom: 0.25px solid #ff4400;" id="zubehoer">
 
-                            {{ $request->zubehör }}
+                            {{ $request->zubehoer }}
 
                                 &nbsp;
 

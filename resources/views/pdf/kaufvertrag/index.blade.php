@@ -274,7 +274,8 @@
                             </tr>
                             <tr>
                                 <td class="ueberschriften" colspan="2" style="padding: 5px 0;">4. Zubehör und Zusatzausstattung</td>
-                            </tr><tr>
+                            </tr>
+                            <tr>
                                 <td colspan="2" style="padding: 5px 0;">
                                     <table class="zubehoer">
                                         <tr>
@@ -295,7 +296,7 @@
                                             <td width="100%">
                                                 <div class="col-md-12 pl-0">
                                                 Das Fahrzeug hatte nach Kenntnis des Verkäufers
-                                                <input type="text" name="{{ $verkauf->halter }}" id="" style="width: 20px; height: 20px;">&nbsp;Vorbesitzer (exklusive Verkäufer).
+                                                <input type="text" name="halter" id="" value="{{ $verkauf->halter }}" style="width: 20px; height: 20px;">&nbsp;Vorbesitzer (exklusive Verkäufer).
                                                 </div>
                                             </td>
                                         </tr>
@@ -377,8 +378,8 @@
                                             <td style="vertical-align: top;">
                                                 <div class="col-md-12 pl-0">
                                                     <div class="custom-control custom-checkbox custom-control-inline mr-1">
-                                                        <input class="custom-control-input" type="checkbox" name="ummeldung" id="ummeldung" value="1">
-                                                        <label class="custom-control-label" for="ummeldung">Der Käufer verpflichtet sich, das Fahrzeug unverzüglich, spätestens innerhalb einer Woche ab Übergabe, umzumelden.</label>
+                                                        <input class="custom-control-input" type="checkbox" name="ummeldung" id="ummeldung_check" value="1">
+                                                        <label class="custom-control-label" for="ummeldung_check">Der Käufer verpflichtet sich, das Fahrzeug unverzüglich, spätestens innerhalb einer Woche ab Übergabe, umzumelden.</label>
                                                     </div>
                                                 </div>
                                             </td>
@@ -452,8 +453,8 @@
                                             <td style="vertical-align: top;">
                                                 <div class="col-md-12 pl-0">
                                                     <div class="custom-control custom-checkbox custom-control-inline mr-1">
-                                                        <input class="custom-control-input" type="checkbox" name="uebergabe" id="uebergabe" value="1">
-                                                        <label class="custom-control-label" for="uebergabe">Hiermit bestätigt der Verkäufer, das Fahrzeug an den Käufer übergeben, und der Käufer, das Fahrzeug von dem Verkäufer erhalten zu haben.</label>
+                                                        <input class="custom-control-input" type="checkbox" name="uebergabe" id="uebergabe_check" value="1">
+                                                        <label class="custom-control-label" for="uebergabe_check">Hiermit bestätigt der Verkäufer, das Fahrzeug an den Käufer übergeben, und der Käufer, das Fahrzeug von dem Verkäufer erhalten zu haben.</label>
                                                     </div>
                                                 </div>
                                             </td>
