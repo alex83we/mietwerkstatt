@@ -39,7 +39,7 @@
             padding: 5px;
         }
         .preis td {
-            height: 120px;
+            height: 110px;
             padding: 0 5px;
         }
     </style>
@@ -49,10 +49,10 @@
 <h1>{{ $fahrzeuge->anzeigetext }}</h1>
 <table id="preisschild">
     <tr>
-        <th colspan="2">Technische Daten</th>
+        <th colspan="3">Technische Daten</th>
     </tr>
     <tr class="daten">
-        <td colspan="2">
+        <td colspan="3">
             <table class="inner">
                 <tr>
                     <td class="tdwidth">Leistung kW (PS)</td>
@@ -88,10 +88,10 @@
         </td>
     </tr>
     <tr>
-        <th colspan="2">Ausstattung</th>
+        <th colspan="3">Ausstattung</th>
     </tr>
     <tr id="ausstattung">
-        <td colspan="2" class="ausstattung">
+        <td colspan="3" class="ausstattung">
             <table class="inneraus">
                 <tr>
                     <td class="tdwidth">
@@ -218,18 +218,24 @@
         </td>
     </tr>
     <tr>
-        <td colspan="2" class="description">{!! Str::limit($fahrzeuge->beschreibung, 1250) !!}<br><br>
-            Weitere Infos unter: {{ url($fahrzeuge->slug) }}<br>
-            {{ $qrcode }}
+        <td colspan="3" class="description">
+            @if($fahrzeuge->beschreibung == true)
+                <b>Beschreibung:</b><br>
+                {!! Str::limit($fahrzeuge->beschreibung, 1500) !!}
+            @endif
         </td>
     </tr>
     <tr>
-        <th colspan="2">Barzahlungspreis</th>
+        <th colspan="3">Barzahlungspreis</th>
     </tr>
     <tr class="preis" style="text-align: center;">
+        <td>Weitere Infos unter:<br>
+            <img src="data:image/png;base64, {!! base64_encode(QrCode::format('png')->size(75)->generate(route('verkauf.show',$fahrzeuge->slug))) !!}">
+        </td>
         <td><img src="https://dev.mietwerkstatt-rossleben.de/images/Gruene_Plakette.png" width="100px"></td>
         <td style="text-align: right; font-size: 32px; font-weight: bold;">{{ $fahrzeuge->preis. ' €' }}</td>
     </tr>
 </table>
+    <div style="padding: 5px;"><b>Link:</b> {{ url($fahrzeuge->slug) }}</div>
 </body>
 </html>

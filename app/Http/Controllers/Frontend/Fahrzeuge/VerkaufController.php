@@ -377,7 +377,9 @@ class VerkaufController extends Controller
      */
     public function show(Verkauf $verkauf)
     {
-        return view('verkauf.show', compact('verkauf', $verkauf));
+        $previous_record = Verkauf::where('id', '<', $verkauf->id)->orderBy('id', 'desc')->first();
+        $next_record = Verkauf::where('id', '>', $verkauf->id)->orderBy('id')->first();
+        return view('verkauf.show', compact('verkauf', $verkauf, 'previous_record', 'next_record'));
     }
 
 

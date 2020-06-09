@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Backend\Dashboard;
+use App\Models\Fahrzeuge\Verkauf;
 use Illuminate\Support\Facades\Route;
 use Robots\Facades\Robots;
 use Spatie\Sitemap\SitemapGenerator;
@@ -113,7 +114,13 @@ Route::namespace('Backend')->prefix('backend')->name('backend.')->middleware('ca
 });
 
 // PDF
-Route::get('pdf/{id}', 'Backend\Fahrzeuge\PreisschildController@preisschild');
+Route::namespace('PDF')->prefix(config('mwr.pdf.route.attributes.prefix'))->name('pdf.')->middleware(config('mwr.pdf.route.attributes.middleware'))->group(function () {
+    Route::get('preisschild/{id}', 'PreisschildController@preisschild')
+    ->name('pdf');
+    Route::get('kaufvertrag/{id}', 'KaufvertragController@index')->name('kaufvertrag.index');
+    Route::post('kaufvertrag', 'KaufvertragController@store')->name('kaufvertrag.store');
+});
+
 
 Route::get('robots.txt', function() {
 

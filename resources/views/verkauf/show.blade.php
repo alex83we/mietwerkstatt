@@ -31,6 +31,8 @@
     </style>
 @endpush
 
+@include('partials.social')
+
 @section('content')
     <div class="container">
         @foreach($verkauf->fahrzeuges_ausstattung as $ausstattung)
@@ -79,7 +81,17 @@
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="technik-preis-container">
-                                        <p class="technik-preis">{{ number_format($verkauf->preis, 2, ',', '.') }} € @if ($verkauf->preisx === 'Verhandlungsbasis') VB @endif</p>
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <p class="technik-preis">{{ number_format($verkauf->preis, 2, ',', '.') }} € @if ($verkauf->preisx === 'Verhandlungsbasis') VB @endif</p>
+                                            </div>
+                                            <div class="col-lg-6 text-right">
+                                                @can('manage-users')
+                                                    <a href="{{ route('backend.verkauf.edit', $verkauf->id) }}" class="btn btn-light mr-1"><i class="fas fa-edit"></i> </a>
+                                                    <a href="{{ route('pdf.pdf', $verkauf->id) }}" class="btn btn-light">Preisschild</a>
+                                                @endcan
+                                            </div>
+                                        </div>
                                     </div>
                                     <!--<div class="platzhalter"></div>-->
                                     <h2 class="dp-title-h2 prime-color">Kontakt</h2>
@@ -167,17 +179,6 @@
                                     <div class="technik-button-container">
                                         <a href="{{ route('verkauf.pdf', $verkauf->id) }}" id="ttf-druck-off" class="btn btn-danger mb-2">Angebot ausdrucken</a>
                                         <a href="#" id="ttf-request-fahrzeuge" class="btn btn-secondary mb-2">Fahrzeuganfrage</a>
-                                        @can('manage-users')
-                                        <a href="{{ route('backend.verkauf.edit', $verkauf->id) }}" class="btn btn-danger mb-2">Bearbeiten</a>
-                                        <a href="{{ url('pdf', $verkauf->id) }}" class="btn btn-success mb-2">Preisschild</a>
-                                        @endcan
-                                    </div>
-                                    <div class="technik-button-container text-center" style="margin-top: 10px; display: inline-block">
-                                        {!! Share::currentPage()
-                                            ->facebook()
-                                            ->twitter()
-                                            ->whatsapp()
-                                        !!}
                                     </div>
                                 </div>
                             </div>
@@ -751,7 +752,7 @@
                     </div>
                 </div>
             @endif
-        <!-- Kontakt -->
+            <!-- Kontakt -->
             @foreach($verkauf->fahrzeuges_kontakt as $key=>$kontakt)
                 <div class="row mt-4 mb-4">
                     <div class="col">
@@ -811,7 +812,7 @@
                     </div>
                 </div>
             @endforeach
-        <!-- Anfrage -->
+            <!-- Anfrage -->
             <div class="row mt-4 mb-4">
                 <div class="col">
                     <div class="container-content">
@@ -867,6 +868,37 @@
                 </div>
             </div>
         @endforeach
+        @if(isset($previous_record))
+        <!-- Previous to Next -->
+        <div class="row mt-4 mb-4">
+            <div class="col">
+                <div class="container-content">
+                    <div class="container-inner">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                @if(isset($previous_record))
+                                    <a href="{{ url($previous_record->slug) }}" class="text-decoration-none text-dark">
+                                        <div class="btn-content">
+                                            <div class="btn-content-title"><i class="fa fa-arrow-left"></i> {{ $previous_record->anzeigetext }}</div>
+                                        </div>
+                                    </a>
+                                @endif
+                            </div>
+                            <div class="col-lg-6">
+                                @if(isset($previous_record))
+                                    <a href="{{ url($previous_record->slug) }}" class="text-decoration-none text-dark">
+                                        <div class="btn-content text-right">
+                                            <div class="btn-content-title">{{ $previous_record->anzeigetext }} <i class="fa fa-arrow-right"></i></div>
+                                        </div>
+                                    </a>
+                                @endif
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @endif
     </div><!-- Container end -->
 
 @endsection
