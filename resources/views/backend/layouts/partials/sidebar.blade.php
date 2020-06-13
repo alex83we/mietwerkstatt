@@ -122,8 +122,8 @@
                         </ul>
                     </li>--}}
                     <li class="nav-header">Firma</li>
-                    <li class="nav-item has-treeview  {{ Request::is('backend/firma*') ? 'menu-open' : '' }}">
-                        <a href="#" class="nav-link {{ Request::is('backend/firma*') ? 'active' : '' }}">
+                    <li class="nav-item has-treeview  {{ Request::is('backend/stammdaten*') ? 'menu-open' : '' }}">
+                        <a href="#" class="nav-link {{ Request::is('backend/stammdaten*') ? 'active' : '' }}">
                             <i class="nav-icon far fa-building"></i>
                             <p>
                                 Stammdaten
@@ -132,12 +132,24 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="{{ route('backend.firma.index') }}" class="nav-link {{ Request::is('backend/firma*') ? 'active' : '' }}">
+                                <a href="{{ route('backend.firma.index') }}" class="nav-link {{ Request::is('backend/stammdaten/firma*') ? 'active' : '' }}">
                                     <i class="nav-icon fas fa-building"></i>
                                     <p>Firmendaten</p>
                                 </a>
                             </li>
+                            <li class="nav-item">
+                                <a href="{{ route('backend.preisliste.backendindex') }}" class="nav-link {{ Request::is('backend/stammdaten/preisliste*') ? 'active' : '' }}">
+                                    <i class="nav-icon fas fa-euro-sign"></i>
+                                    <p>Preisliste</p>
+                                </a>
+                            </li>
                         </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('backend.kaufvertrag') }}" class="nav-link {{ Request::is('backend/kaufvertrag*') ? 'active' : '' }}">
+                            <i class="fa fa-file-pdf-o nav-icon"></i>
+                            <p>Kaufverträge</p>
+                        </a>
                     </li>
                 @endcan
             </ul>

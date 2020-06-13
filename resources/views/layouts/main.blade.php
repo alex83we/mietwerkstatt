@@ -1,4 +1,9 @@
 <!doctype html>
+<?php
+session_cache_limiter('none');
+header('Cache-control: max-age='.(60*60*24*7)); //one week
+header('Expires: '.gmdate(DATE_RFC1123,time()+60*60*24*365)); //one week
+?>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="128725df-59ff-4052-8e9a-14b16a997f90" data-blockingmode="auto" type="text/javascript"></script>
@@ -30,7 +35,7 @@
     <title>@yield('titel') | {{ config('app.name', 'Mietwerkstatt Roßleben KFZ Service, Teile & Verkauf') }}</title>
 
     <!-- Bootstrap -->
-    <link href="//fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+{{--    <link href="//fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">--}}
 {{--    <link href="//cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">--}}
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     @toastr_css

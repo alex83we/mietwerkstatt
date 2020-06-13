@@ -1,10 +1,15 @@
 @extends('layouts.main')
 
+@section('canonical')
+    <link rel="canonical" href="{{ url()->full() }}"/>
+@endsection
+
 @section('meta')
     <meta name="robots" content="index, follow" />
 @endsection
 
-@section('titel', 'Willkommen bei KFZ Service ')
+
+@section('titel', 'Fahrzeugsuche')
 
 @push('css')
     <style>

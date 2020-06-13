@@ -20,6 +20,9 @@
             <li class="nav-item {{ Request::is('werkstatt*') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ url('werkstatt') }}">Mietwerkstatt</a>
             </li>
+            <li class="nav-item {{ Request::is('preisliste*') ? 'active' : '' }}">
+                <a class="nav-link" href="{{ url('preisliste') }}">Preisliste</a>
+            </li>
             <li class="nav-item {{ Request::is('kontakt*') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ url('kontakt') }}">Kontakt</a>
             </li>

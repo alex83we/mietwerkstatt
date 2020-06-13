@@ -1,5 +1,13 @@
 @extends('backend.layouts.main')
 
+@section('canonical')
+    <link rel="canonical" href="{{ url()->full() }}"/>
+@endsection
+
+@section('meta')
+    <meta name="robots" content="none" />
+@endsection
+
 @section('titel', 'Service & Werkstattanfrage ')
 
 @push('css')
@@ -13,6 +21,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-12">
                     <form action="{{ route('backend.firma.store') }}" method="post">
+                        <input type="hidden" name="id" value="{{ $firma->id }}">
                         <div class="card">
                             <div class="card-header bg-dark">
                                 Firmenadresse

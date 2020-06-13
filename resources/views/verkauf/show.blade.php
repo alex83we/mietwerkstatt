@@ -1,5 +1,9 @@
 @extends('layouts.main')
 
+@section('canonical')
+    <link rel="canonical" href="{{ url()->full() }}"/>
+@endsection
+
 @section('meta')
     <meta name="robots" content="index, follow" />
 @endsection
@@ -89,6 +93,7 @@
                                                 @can('manage-users')
                                                     <a href="{{ route('backend.verkauf.edit', $verkauf->id) }}" class="btn btn-light mr-1"><i class="fas fa-edit"></i> </a>
                                                     <a href="{{ route('pdf.pdf', $verkauf->id) }}" class="btn btn-light">Preisschild</a>
+                                                    <a href="{{ route('pdf.kaufvertrag.index', $verkauf->id) }}" class="btn btn-light">Kaufvertrag</a>
                                                 @endcan
                                             </div>
                                         </div>

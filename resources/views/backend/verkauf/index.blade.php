@@ -1,5 +1,13 @@
 @extends('backend.layouts.main')
 
+@section('canonical')
+    <link rel="canonical" href="{{ url()->full() }}"/>
+@endsection
+
+@section('meta')
+    <meta name="robots" content="none" />
+@endsection
+
 @section('titel', 'Fahrzeug Übersicht ')
 
 @push('css')
@@ -70,10 +78,12 @@
                                         <td class="align-middle text-right">@if ($item->preisx === 'Verhandlungsbasis') VB @endif{{ number_format($item->preis, 2, ',', '.').' €' }}</td>
                                         <td class="align-middle text-right">{{ \Carbon\Carbon::parse($item->created_at)->fromNow() }}</td>
                                         <td class="align-middle text-right">@if($item->updated_at != $item->created_at){{ \Carbon\Carbon::parse($item->updated_at)->fromNow() }}@else keine Änderungen @endif</td>
-                                        <td class="align-middle">
+                                        <td class="align-middle text-right" style="width: 200px">
                                             <div class="btn-group btn-group-sm" role="group">
                                                 <a href="{{ route('backend.verkauf.edit', $item->id) }}" class="btn btn-sm btn-success"><i class="fas fa-edit"></i></a>
                                                 <a href="{{ route('backend.verkauf.images', $item->id) }}" class="btn btn-sm btn-success"><i class="fas fa-images"></i></a>
+                                                <a href="{{ route('pdf.pdf', $item->id) }}" class="btn btn-sm btn-info"><i class="fas fa-tag"></i></a>
+                                                <a href="{{ route('pdf.kaufvertrag.index', $item->id) }}" class="btn btn-sm btn-info"><i class="fas fa-file-signature"></i></a>
                                                 @if($item->aktiv == true)
                                                     <form action="{{ route('backend.verkauf.aktivupdate', $item->id) }}" method="post" style="display: inline-block;" >
                                                         @csrf
@@ -131,26 +141,30 @@
                                         <td class="align-middle text-right">@if ($item->preisx === 'Verhandlungsbasis') VB @endif{{ number_format($item->preis, 2, ',', '.').' €' }}</td>
                                         <td class="align-middle text-right">{{ \Carbon\Carbon::parse($item->created_at)->fromNow() }}</td>
                                         <td class="align-middle text-right">@if($item->updated_at != $item->created_at){{ \Carbon\Carbon::parse($item->updated_at)->fromNow() }}@else keine Änderungen @endif</td>
-                                        <td class="align-middle">
-                                            <form action="{{ route('backend.verkauf.aktivupdate', $item->id) }}" method="post" style="display: inline-block;" >
-                                                @csrf
-                                                @method('PUT')
-                                                <input type="hidden" name="id" value="{{ $item->id }}">
-                                                <input type="hidden" name="aktiv" value="1">
-                                                @if($item->aktiv == 1)
-                                                    <button type="submit" class="btn btn-warning btn-sm">Verkauft?</button>
-                                                @else
-                                                    <button type="submit" class="btn btn-danger btn-sm">Aktiv?</button>
-                                                @endif
-                                            </form>
-                                            @if (Auth::user()->hasRole('admin'))
-                                                <form action="{{ route('backend.verkauf.destroy', $item->id) }}" method="post" style="display: inline;">
+                                        <td class="align-middle text-right" style="width: 200px;">
+                                            <div class="btn-group btn-group-sm" role="group">
+                                                <a href="{{ route('pdf.pdf', $item->id) }}" class="btn btn-sm btn-info"><i class="fas fa-tag"></i></a>
+                                                <a href="{{ route('pdf.kaufvertrag.index', $item->id) }}" class="btn btn-sm btn-info"><i class="fas fa-file-signature"></i></a>
+                                                <form action="{{ route('backend.verkauf.aktivupdate', $item->id) }}" method="post" style="display: inline-block;" >
                                                     @csrf
-                                                    @method('DELETE')
-
-                                                    <button type="submit" class="btn btn-sm btn-danger mx-1"><i class="fas fa-trash"></i></button>
+                                                    @method('PUT')
+                                                    <input type="hidden" name="id" value="{{ $item->id }}">
+                                                    <input type="hidden" name="aktiv" value="1">
+                                                    @if($item->aktiv == 1)
+                                                        <button type="submit" class="btn btn-warning btn-sm" style="border-bottom-left-radius: 0; border-top-left-radius: 0;">Verkauft?</button>
+                                                    @else
+                                                        <button type="submit" class="btn btn-danger btn-sm" style="border-bottom-left-radius: 0; border-top-left-radius: 0;">Aktiv?</button>
+                                                    @endif
                                                 </form>
-                                            @endif
+                                                @if (Auth::user()->hasRole('admin'))
+                                                    <form action="{{ route('backend.verkauf.destroy', $item->id) }}" method="post" style="display: inline;">
+                                                        @csrf
+                                                        @method('DELETE')
+
+                                                        <button type="submit" class="btn btn-sm btn-danger mx-1"><i class="fas fa-trash"></i></button>
+                                                    </form>
+                                                @endif
+                                            </div>
                                         </td>
                                     </tr>
                                     @endif

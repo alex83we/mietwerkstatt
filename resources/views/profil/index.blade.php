@@ -1,7 +1,11 @@
 @extends('layouts.main')
 
+@section('canonical')
+    <link rel="canonical" href="{{ url()->full() }}"/>
+@endsection
+
 @section('meta')
-    <meta name=“robots“ content=“noindex, nofollow“ />
+    <meta name="robots" content="none" />
 @endsection
 
 @section('titel', 'Profil')

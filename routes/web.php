@@ -2,6 +2,7 @@
 
 use App\Models\Backend\Dashboard;
 use App\Models\Fahrzeuge\Verkauf;
+use App\User;
 use Illuminate\Support\Facades\Route;
 use Robots\Facades\Robots;
 use Spatie\Sitemap\SitemapGenerator;
@@ -87,7 +88,7 @@ Route::namespace('Backend')->prefix('backend')->name('backend.')->middleware('ca
 
     // User Management
     Route::resource('/users', 'UsersController', ['except' => ['show', 'create', 'store']]);
-    Route::resource('/firma', 'FirmenController');
+    Route::resource('stammdaten/firma', 'FirmenController');
 
     // Fahrzeug Hersteller und Model anlegen
     Route::get('/add', 'Add\ItemsController@index')->name('add.index');
@@ -110,8 +111,16 @@ Route::namespace('Backend')->prefix('backend')->name('backend.')->middleware('ca
     Route::get('/anfrage/{anfrage}', 'Fahrzeuge\AnfrageController@show')->name('anfrage.show');
     Route::delete('/anfrage/{anfrage}', 'Fahrzeuge\AnfrageController@destroy')->name('anfrage.destroy');
 
+    //Kaufvertrag
+    Route::get('/kaufvertrag', 'PDF\KaufvertragController@index')->name('kaufvertrag');
 
+    // Preisliste
+    Route::resource('stammdaten/preisliste', 'Preisliste\PreislisteController', ['except' => ['index', 'create']]);
+    Route::get('stammdaten/preisliste', 'Preisliste\PreislisteController@backendIndex')->name('preisliste.backendindex');
 });
+
+// Preisliste
+Route::get('/preisliste', 'Backend\Preisliste\PreislisteController@index')->name('preisliste.index');
 
 // PDF
 Route::namespace('PDF')->prefix(config('mwr.pdf.route.attributes.prefix'))->name('pdf.')->middleware(config('mwr.pdf.route.attributes.middleware'))->group(function () {
@@ -121,7 +130,7 @@ Route::namespace('PDF')->prefix(config('mwr.pdf.route.attributes.prefix'))->name
     Route::post('kaufvertrag', 'KaufvertragController@store')->name('kaufvertrag.store');
 });
 
-
+// Robots
 Route::get('robots.txt', function() {
 
     // If on the live server

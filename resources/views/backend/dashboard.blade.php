@@ -1,5 +1,13 @@
 @extends('backend.layouts.main')
 
+@section('canonical')
+    <link rel="canonical" href="{{ url()->full() }}"/>
+@endsection
+
+@section('meta')
+    <meta name="robots" content="none" />
+@endsection
+
 @section('titel', 'Dashboard')
 
 @section('description'){{ html_entity_decode('Hier ist dein persönlicher Bereich wo du Anpassungen am Profil vornehmen kannst, aber hier kannst du auch deine Fahrzeuge bearbeiten.', ENT_QUOTES, 'UTF-8') }}@endsection
@@ -101,7 +109,11 @@
                                                 <td class="align-middle">@if ($fahrzeuge->preisx === 'Verhandlungsbasis') VB @endif{{ number_format($fahrzeuge->preis, 2, ',', '.').' €' }}</td>
                                                 <td class="align-middle">{{ \Carbon\Carbon::parse($fahrzeuge->created_at)->fromNow() }}</td>
                                                 <td class="align-middle">@if($fahrzeuge->updated_at != $fahrzeuge->created_at){{ \Carbon\Carbon::parse($fahrzeuge->updated_at)->fromNow() }}@else keine Änderungen @endif</td>
-                                                <td class="align-middle text-center"><a href="{{ route('backend.verkauf.edit', $fahrzeuge->id) }}" class="btn btn-orange btn-sm"><i class="fas fa-edit mr-1"></i> Bearbeiten</a></td>
+                                                <td class="align-middle text-center">
+                                                    <a href="{{ route('backend.verkauf.edit', $fahrzeuge->id) }}" class="btn btn-orange btn-sm"><i class="fas fa-edit mr-1"></i> Bearbeiten</a>
+                                                    <a href="{{ route('pdf.pdf', $fahrzeuge->id) }}" class="btn btn-light"><i class="fas fa-tag"></i></a>
+                                                    <a href="{{ route('pdf.kaufvertrag.index', $fahrzeuge->id) }}" class="btn btn-light"><i class="fas fa-file-signature"></i></a>
+                                                </td>
                                             </tr>
                                         @endforeach
                                         </tbody>

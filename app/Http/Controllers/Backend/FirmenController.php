@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use App\Models\Firma;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class FirmenController extends Controller
 {
@@ -56,24 +57,43 @@ class FirmenController extends Controller
             'fax' => 'required|max:25',
         ]);
 
-        $firma = new Firma();
-        $firma->firmenname = $request->firmenname;
-        $firma->firmenzusatz = $request->firmenzusatz;
-        $firma->straße = $request->straße;
-        $firma->plz = $request->plz;
-        $firma->ort = $request->ort;
-        $firma->telefon = $request->telefon;
-        $firma->www = $request->www;
-        $firma->mobil = $request->mobil;
-        $firma->email = $request->email;
-        $firma->fax = $request->fax;
-        $firma->ustid = $request->ustid;
-        $firma->steuernr = $request->steuernr;
-
-        if($firma->save()) {
+        if ($request->id == 1) {
+            DB::table('backend_firmendaten')->where('id', '=', 1)->update([
+                'firmenname' => $request->firmenname,
+                'firmenzusatz' => $request->firmenzusatz,
+                'straße' => $request->straße,
+                'plz' => $request->plz,
+                'ort' => $request->ort,
+                'telefon' => $request->telefon,
+                'www' => $request->www,
+                'mobil' => $request->mobil,
+                'email' => $request->email,
+                'fax' => $request->fax,
+                'ustid' => $request->ustid,
+                'steuernr' => $request->steuernr,
+                'updated_at' => now(),
+            ]);
             toastr()->success('Die Firmendaten wurden gespeichert!', 'Erfolgreich gespeichert');
         } else {
-            toastr()->error('Es ist ein Fehler aufgetreten!', 'Fehler aufgetreten');
+            $firma = new Firma();
+            $firma->firmenname = $request->firmenname;
+            $firma->firmenzusatz = $request->firmenzusatz;
+            $firma->straße = $request->straße;
+            $firma->plz = $request->plz;
+            $firma->ort = $request->ort;
+            $firma->telefon = $request->telefon;
+            $firma->www = $request->www;
+            $firma->mobil = $request->mobil;
+            $firma->email = $request->email;
+            $firma->fax = $request->fax;
+            $firma->ustid = $request->ustid;
+            $firma->steuernr = $request->steuernr;
+
+            if ($firma->save()) {
+                toastr()->success('Die Firmendaten wurden gespeichert!', 'Erfolgreich gespeichert');
+            } else {
+                toastr()->error('Es ist ein Fehler aufgetreten!', 'Fehler aufgetreten');
+            }
         }
 
         return redirect()->back();

@@ -22,7 +22,7 @@ class FahrzeugAnfrageController extends Controller
         $anfrage->email = $request->email;
         $anfrage->telefon = $request->telefon;
         $anfrage->datenschutz = $request->datenschutz;
-        $anfrage->text = nl2br($request->text);
+        $anfrage->text = nl2br(e($request->text));
 
         if ($anfrage->save()) {
             Toastr::success('Anfrage erfolgreich versendet', 'Erfolg');

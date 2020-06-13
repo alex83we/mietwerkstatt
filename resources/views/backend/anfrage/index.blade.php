@@ -1,5 +1,13 @@
 @extends('backend.layouts.main')
 
+@section('canonical')
+    <link rel="canonical" href="{{ url()->full() }}"/>
+@endsection
+
+@section('meta')
+    <meta name="robots" content="none" />
+@endsection
+
 @section('titel', 'Anfragen')
 
 @push('css')
@@ -71,14 +79,14 @@
                             </tr>
                             <tr>
                                 {{--                                <td>@if($anfrage->datenschutz == true){{ __('Datenschutz akzeptiert') }}@endif</td>--}}
-                                <td colspan="2" class="py-2">{{ $anfrage->text }}</td>
+                                <td colspan="2" class="py-2">{!! $anfrage->text !!}</td>
                                 <td class="py-2"><a href="tel:{{$anfrage->telefon}}" class="link-black">{{ $anfrage->telefon }}</a></td>
                                 @if($anfrage->anrede == 'Herr')
-                                    <td class="py-2"><a href="mailto:{{$anfrage->email.'?subject=Re: '.$anfrage->betreff.'&body=Sehr geehrter '.$anfrage->anrede.' '.$anfrage->name.',%0D%0A%0D%0A%0D%0AIhre Anfrage vom '.\Carbon\Carbon::parse($anfrage->created_at)->format('d.m.Y').':%0D%0A'.$anfrage->text.'%0D%0A%0D%0AMit freundlichen Grüßen%0D%0A%0D%0A'.Auth::user()->vorname.' '.Auth::user()->name}}" class="link-black">{{ $anfrage->email }}</a></td>
+                                    <td class="py-2"><a href="mailto:{!! $anfrage->email.'?subject=Re: '.$anfrage->betreff.'&body=Sehr geehrter '.$anfrage->anrede.' '.$anfrage->name.',%0D%0A%0D%0A%0D%0AIhre Anfrage vom '.\Carbon\Carbon::parse($anfrage->created_at)->format('d.m.Y').':%0D%0A'.$anfrage->text.'%0D%0A%0D%0AMit freundlichen Grüßen%0D%0A%0D%0A'.Auth::user()->vorname.' '.Auth::user()->name!!}" class="link-black">{{ $anfrage->email }}</a></td>
                                 @elseif($anfrage->anrede == 'Frau')
-                                    <td class="py-2"><a href="mailto:{{$anfrage->email.'?subject=Re: '.$anfrage->betreff.'&body=Sehr geehrte '.$anfrage->anrede.' '.$anfrage->name.',%0D%0A%0D%0A%0D%0AIhre Anfrage vom '.\Carbon\Carbon::parse($anfrage->created_at)->format('d.m.Y').':%0D%0A'.$anfrage->text.'%0D%0A%0D%0AMit freundlichen Grüßen%0D%0A%0D%0A'.Auth::user()->vorname.' '.Auth::user()->name}}" class="link-black">{{ $anfrage->email }}</a></td>
+                                    <td class="py-2"><a href="mailto:{!! $anfrage->email.'?subject=Re: '.$anfrage->betreff.'&body=Sehr geehrte '.$anfrage->anrede.' '.$anfrage->name.',%0D%0A%0D%0A%0D%0AIhre Anfrage vom '.\Carbon\Carbon::parse($anfrage->created_at)->format('d.m.Y').':%0D%0A'.$anfrage->text.'%0D%0A%0D%0AMit freundlichen Grüßen%0D%0A%0D%0A'.Auth::user()->vorname.' '.Auth::user()->name!!}" class="link-black">{{ $anfrage->email }}</a></td>
                                 @else
-                                    <td class="py-2"><a href="mailto:{{$anfrage->email}}" class="link-black">{{ $anfrage->email }}</a> </td>
+                                    <td class="py-2"><a href="mailto:{!!$anfrage->email!!}" class="link-black">{{ $anfrage->email }}</a> </td>
                                 @endif
                                 {{--                                <td class="py-2"></td>--}}
                             </tr>

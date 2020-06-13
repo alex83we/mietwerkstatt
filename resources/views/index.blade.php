@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('canonical')
-    <link rel="canonical" href="https://www.mietwerkstatt-rossleben.de"/>
+    <link rel="canonical" href="{{ url()->full() }}"/>
 @endsection
 
 @section('meta')

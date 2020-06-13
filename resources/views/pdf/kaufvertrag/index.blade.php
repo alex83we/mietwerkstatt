@@ -1,5 +1,13 @@
 @extends('layouts.main')
 
+@section('canonical')
+    <link rel="canonical" href="{{ url()->full() }}"/>
+@endsection
+
+@section('meta')
+    <meta name="robots" content="none" />
+@endsection
+
 @section('titel', 'Kaufvertrag')
 
 @push('css')
@@ -233,13 +241,13 @@
                                 <td colspan="2">
                                     <div class="col-md-12 pl-0">
                                         <div class="custom-control custom-checkbox custom-control-inline">
-                                            <input class="custom-control-input" type="checkbox" name="3_1" id="3.1" value="1">
+                                            <input class="custom-control-input" type="checkbox" name="drei_eins" id="3.1" value="1">
                                             <label class="custom-control-label" for="3.1">Der Verkäufer ist unbeschränkter Eigentümer von Zubehör und Fahrzeug.</label>
                                         </div>
                                     </div>
                                     <div class="col-md-12 pl-0">
                                         <div class="custom-control custom-checkbox custom-control-inline">
-                                            <input class="custom-control-input" type="checkbox" name="3_2" id="3.2" value="1">
+                                            <input class="custom-control-input" type="checkbox" name="drei_zwei" id="3.2" value="1">
                                             <label class="custom-control-label" for="3.2">Das Fahrzeug weist eine Gesamtfahrleistung von&nbsp;</label>
                                             <input type="text" name="fahrleistung1" id="" style="width: 150px; height: 20px;">&nbsp;km auf.
                                         </div>
@@ -247,26 +255,26 @@
                                     <div class="col-md-12 pl-0">
                                         Das Fahrzeug ist mit dem&nbsp;
                                         <div class="custom-control custom-checkbox custom-control-inline mr-0">
-                                            <input class="custom-control-input" type="checkbox" name="3_3" id="3.3" value="1">
+                                            <input class="custom-control-input" type="checkbox" name="drei_drei" id="3.3" value="1">
                                             <label class="custom-control-label" for="3.3">Originalmotor oder einem&nbsp;</label>
                                         </div>
                                         <div class="custom-control custom-checkbox custom-control-inline">
-                                            <input class="custom-control-input" type="checkbox" name="3_4" id="3.4" value="1">
+                                            <input class="custom-control-input" type="checkbox" name="drei_vier" id="3.4" value="1">
                                             <label class="custom-control-label" for="3.4">Austauschmotor mit einer km-Leistung von&nbsp;</label>
                                             <input type="text" name="amotorkmleistung" id="" style="width: 150px; height: 20px;">&nbsp;km auf.
                                         </div>
                                     </div>
                                     <div class="col-md-12 pl-0">
                                         <div class="custom-control custom-checkbox custom-control-inline mr-1">
-                                            <input class="custom-control-input" type="checkbox" name="3_5" id="3.5" value="1">
+                                            <input class="custom-control-input" type="checkbox" name="drei_fuenf" id="3.5" value="1">
                                             <label class="custom-control-label" for="3.5">Das Fahrzeug hat keinen Unfallschaden erlitten, seit es im Eigentum des Verkäufers war.</label>
                                         </div>
                                         <div class="custom-control custom-checkbox custom-control-inline">
-                                            <input class="custom-control-input" type="checkbox" name="3_6" id="3.6" value="1">
+                                            <input class="custom-control-input" type="checkbox" name="drei_sechs" id="3.6" value="1">
                                             <label class="custom-control-label" for="3.6">Oder: Das Fahrzeug hatte folgende Unfallschäden:</label>
                                         </div>
                                         <div class="pt-2">
-                                            <textarea class="form-control" id="" name="unfallschaeden" rows="4"></textarea>
+                                            <textarea class="form-control" id="" name="unfallschaeden_text" rows="7"></textarea>
                                             <small>Beschreibung des Schadens</small>
                                         </div>
                                     </div>
@@ -335,8 +343,11 @@
                                     <table id="sondervereinbarung">
                                         <tr>
                                             <td width="100%">
-                                                <textarea class="form-control" id="" name="unfallschaeden" rows="3"></textarea>
+                                                <textarea class="form-control" id="" name="sondervereinbarung_text" rows="6">{{ old('sondervereinbarung_text') }}</textarea>
                                                 <small>(z. B. bei Verkauf eines Sonder-Kfz)</small>
+                                                @error('sondervereinbarung_text')
+                                                    <br><small class="text-danger font-weight-bold">es sind nur 500 Zeichen zugelassen</small>
+                                                @enderror
                                             </td>
                                         </tr>
                                     </table>
@@ -437,7 +448,7 @@
                                         </tr>
                                         <tr>
                                             <td colspan="2">
-                                                <textarea class="form-control" id="" name="unfallschaeden" rows="3"></textarea>
+                                                <textarea class="form-control" id="" name="unfallschaeden" rows="6"></textarea>
                                             </td>
                                         </tr>
                                     </table>
@@ -460,8 +471,30 @@
                                             </td>
                                             <td colspan="2" style="padding-left: 10px; width: 50%;">
                                                 <div class="col-md-12 pl-0">
-                                                    <input type="text" name="uebergabe_datum" id="" value="Roßleben, ">&nbsp;
+                                                    <input type="text" name="uebergabe_datum" id="" value="Roßleben, {{ \Carbon\Carbon::now()->isoFormat('DD.MM.YYYY HH:mm:ss') }}">&nbsp;
                                                     <small>Ort, Datum, Uhrzeit der Fahrzeugübergabe</small>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" style="padding: 10px 0;">
+                                    <table id="huau">
+                                        <tr>
+                                            <td style="vertical-align: top;">
+                                                <div class="col-md-12 pl-0">
+                                                    <div class="custom-control custom-checkbox custom-control-inline mr-1">
+                                                        <input class="custom-control-input" type="checkbox" name="bescheinigunghu" id="bescheinigunghu_check" value="1">
+                                                        <label class="custom-control-label" for="bescheinigunghu_check">Bescheinigung über die letzte Hauptuntersuchung (HU)</label>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td colspan="2" style="padding-left: 10px; width: 50%;">
+                                                <div class="col-md-12 pl-0">
+                                                    <input type="text" name="versicherungnr" id="">&nbsp;
+                                                    <small>Kraftfahrzeugversicherungsnummer</small>
                                                 </div>
                                             </td>
                                         </tr>
@@ -473,7 +506,7 @@
                             <div class="row mt-4">
                                 <div class="col-md-6">&nbsp;</div>
                                 <div class="col-md-6 text-right">
-                                    <button type="submit" class="btn btn-orange">Erstellen</button>
+                                    <button type="submit" class="btn btn-orange" formtarget="_blank">Erstellen</button>
                                 </div>
                             </div>
                         </div>
