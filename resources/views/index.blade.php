@@ -39,18 +39,16 @@
                     <p>Wir führen folgende Arbeiten an ihrem PKW durch Öl Wechsel inklusive aller Filter, Kleinarbeiten wie
                         Zündkerzen wechseln Kühlmittel prüfen und gegebenenfalls ersetzen.</p>
                     <p>Reparaturen an der elektrischen Anlage Batteriezustand prüfen, Batterie laden, Funktionen der
-                        Scheinwerfer und
-                        Leuchtmittel kontrollieren gegebenenfalls ersetzen, Kabelanschlüsse und Sicherungen Prüfen,
+                        Scheinwerfer und Leuchtmittel kontrollieren gegebenenfalls ersetzen, Kabelanschlüsse und Sicherungen Prüfen,
                         Scheibenwischerblätter erneuern.</p>
                     <p>Wir vermieten unsere Hebebühne an sie damit sie ihr Auto bei uns Reparieren können und dies nicht zu
-                        Hause auf der Einfahrt oder der Straße erledigen müssen.<br><br>
-                        Sollten sie Arbeiten an ihrem Kraftfahrzeug ausführen die über unsere Servicetätigkeiten hinaus
-                        gehen so bieten wir ihnen wie oben erwähnt unsere Hebebühne zur Miete an.<br>
-                        Auch hier steht ihnen ein Mitarbeiter mit Rat und Tat zur Seite.
-                    </p>
+                        Hause auf der Einfahrt oder der Straße erledigen müssen.</p>
+                    <p>Sollten sie Arbeiten an ihrem Kraftfahrzeug ausführen die über unsere Servicetätigkeiten hinaus
+                        gehen so bieten wir ihnen wie oben erwähnt unsere Hebebühne zur Miete an.</p>
+                    <p>Auch hier steht ihnen ein Mitarbeiter mit Rat und Tat zur Seite.</p>
                     <p>Wir wechseln auch ihren Reifen im Falle einer Panne oder auch zur Sommer- oder Wintersaison auf
-                        Wunsch wird vor jedem wechsel auch ihr Rad gewuchtet bei uns.<br><br>
-                        Gerne tauschen wir auch ihren Alten Reifen gegen neue Reifen.</p>
+                        Wunsch wird vor jedem wechsel auch ihr Rad gewuchtet bei uns.</p>
+                    <p>Gerne tauschen wir auch ihren Alten Reifen gegen neue Reifen.</p>
                     <ul>
                         <li>KFZ-Service Arbeiten</li>
                         <li>Hebebühnen Vermietung</li>
@@ -214,33 +212,39 @@
                     </div>
                 </div>
                 <div class="col-lg-12 col-xl-4 py-3" style="background-color: #404040; color: #ffffff">
-                    <h5>Öffnungszeiten</h5>
+                    <h5>Öffnungszeiten & Bürozeiten</h5>
                     <div class="pt-4 pb-2">
-                        <table>
+                        <table class="w-100">
                             <tbody>
                             <tr>
                                 <td class="text-left">Montag:</td>
-                                <td>{{ $firma->montag.' Uhr' }}</td>
+                                <td>{{ $firma->montag }} @if($firma->bmontag == true) </td>
+                                <td class="float-right">{{ $firma->bmontag }} @endif</td>
                             </tr>
                             <tr>
                                 <td class="text-left">Dienstag:
-                                <td>{{ $firma->dienstag.' Uhr' }}</td>
+                                <td>{{ $firma->dienstag }} @if($firma->bdienstag == true)</td>
+                                <td class="float-right"> {{ $firma->bdienstag }} @endif</td>
                             </tr>
                             <tr>
                                 <td class="text-left">Mittwoch:
-                                <td>{{ $firma->mittwoch.' Uhr' }}</td>
+                                <td>{{ $firma->mittwoch }} @if($firma->bmittwoch == true)</td>
+                                <td class="float-right"> {{ $firma->bmittwoch }} @endif</td>
                             </tr>
                             <tr>
                                 <td class="text-left">Donnerstag:
-                                <td>{{ $firma->donnerstag.' Uhr' }}</td>
+                                <td>{{ $firma->donnerstag }} @if($firma->bdonnerstag == true)</td>
+                                <td class="float-right"> {{ $firma->bdonnerstag }} @endif</td>
                             </tr>
                             <tr>
                                 <td class="text-left">Freitag:
-                                <td>{{ $firma->freitag.' Uhr' }}</td>
+                                <td>{{ $firma->freitag }} @if($firma->bfreitag == true)</td>
+                                <td class="float-right"> {{ $firma->bfreitag }} @endif</td>
                             </tr>
                             <tr>
                                 <td class="text-left">Samstag:
-                                <td>{{ $firma->samstag.' Uhr' }}</td>
+                                <td>{{ $firma->samstag }} @if($firma->bsamstag == true)</td>
+                                <td class="float-right"> {{ $firma->bsamstag }} @endif</td>
                             </tr>
                             </tbody>
                         </table>

@@ -58,8 +58,11 @@ class PreislisteController extends Controller
         }
         $entsorgung = Preisliste::where('kategorie', '=', $en)->get();
 
+        $prozent19 = 1.19;
+        $prozent16 = 1.16;
+
         return view('preisliste', compact('ohneBühne', $ohneBühne, 'mitBühne', $mitBühne, 'fluessigkeiten',
-            $fluessigkeiten, 'werkzeug', $werkzeug, 'reifenservice', $reifenservice, 'entsorgung', $entsorgung));
+            $fluessigkeiten, 'werkzeug', $werkzeug, 'reifenservice', $reifenservice, 'entsorgung', $entsorgung, 'prozent16', $prozent16, 'prozent19', $prozent19));
     }
 
     public function backendIndex()

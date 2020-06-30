@@ -321,6 +321,90 @@
                                                 </span>
                                             @enderror
                                         </div>
+                                        <div class="col-sm-6"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-header bg-dark rounded-0">Bürozeiten</div>
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label for="montag" class="col-form-label col-sm-1 pt-0">Montag</label>
+                                        <div class="col-sm-2">
+                                            <input type="text"
+                                                   class="form-control form-control-sm @error('bmontag') is-invalid @enderror" name="bmontag" id="bmontag"
+                                                   placeholder="" value="{{ $firma->bmontag }}">
+
+                                            @error('bmontag')
+                                            <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
+                                        </div>
+                                        <label for="dienstag" class="col-form-label col-sm-1 pt-0">Dienstag</label>
+                                        <div class="col-sm-2">
+                                            <input type="text"
+                                                   class="form-control form-control-sm @error('bdienstag') is-invalid @enderror" name="bdienstag" id="bdienstag"
+                                                   placeholder="" value="{{ $firma->bdienstag }}">
+
+                                            @error('bdienstag')
+                                            <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
+                                        </div>
+                                        <label for="mittwoch" class="col-form-label col-sm-1 pt-0">Mittwoch</label>
+                                        <div class="col-sm-2">
+                                            <input type="text"
+                                                   class="form-control form-control-sm @error('bmittwoch') is-invalid @enderror" name="bmittwoch" id="bmittwoch"
+                                                   placeholder="" value="{{ $firma->bmittwoch }}">
+
+                                            @error('bmittwoch')
+                                            <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
+                                        </div>
+                                        <label for="donnerstag" class="col-form-label col-sm-1 pt-0">Donnerstag</label>
+                                        <div class="col-sm-2">
+                                            <input type="text"
+                                                   class="form-control form-control-sm @error('bdonnerstag') is-invalid @enderror" name="bdonnerstag" id="bdonnerstag"
+                                                   placeholder="" value="{{ $firma->bdonnerstag }}">
+
+                                            @error('bdonnerstag')
+                                            <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label for="freitag" class="col-form-label col-sm-1 pt-0">Freitag</label>
+                                        <div class="col-sm-2">
+                                            <input type="text"
+                                                   class="form-control form-control-sm @error('bfreitag') is-invalid @enderror" name="bfreitag" id="bfreitag"
+                                                   placeholder="" value="{{ $firma->bfreitag }}">
+
+                                            @error('bfreitag')
+                                            <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
+                                        </div>
+                                        <label for="samstag" class="col-form-label col-sm-1 pt-0">Samstag</label>
+                                        <div class="col-sm-2">
+                                            <input type="text"
+                                                   class="form-control form-control-sm @error('bsamstag') is-invalid @enderror" name="bsamstag" id="bsamstag"
+                                                   placeholder="" value="{{ $firma->bsamstag }}">
+
+                                            @error('bsamstag')
+                                            <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
+                                        </div>
                                         <div class="col-sm-1"></div>
                                         <div class="col-sm-5">
                                             <button type="submit" class="btn btn-sm btn-block btn-outline-orange">

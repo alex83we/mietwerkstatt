@@ -71,6 +71,21 @@ class FirmenController extends Controller
                 'fax' => $request->fax,
                 'ustid' => $request->ustid,
                 'steuernr' => $request->steuernr,
+                'facebook' => $request->facebook,
+                'instagram' => $request->instagram,
+                'twitter' => $request->twitter,
+                'montag' => $request->montag,
+                'dienstag' => $request->dienstag,
+                'mittwoch' => $request->mittwoch,
+                'donnerstag' => $request->donnerstag,
+                'freitag' => $request->freitag,
+                'samstag' => $request->samstag,
+                'bmontag' => $request->bmontag,
+                'bdienstag' => $request->bdienstag,
+                'bmittwoch' => $request->bmittwoch,
+                'bdonnerstag' => $request->bdonnerstag,
+                'bfreitag' => $request->bfreitag,
+                'bsamstag' => $request->bsamstag,
                 'updated_at' => now(),
             ]);
             toastr()->success('Die Firmendaten wurden gespeichert!', 'Erfolgreich gespeichert');
@@ -88,6 +103,21 @@ class FirmenController extends Controller
             $firma->fax = $request->fax;
             $firma->ustid = $request->ustid;
             $firma->steuernr = $request->steuernr;
+            $firma->facebook = $request->facebook;
+            $firma->instagram = $request->instagram;
+            $firma->twitter = $request->twitter;
+            $firma->montag = $request->montag;
+            $firma->dienstag = $request->dienstag;
+            $firma->mittwoch = $request->mittwoch;
+            $firma->donnerstag = $request->donnerstag;
+            $firma->freitag = $request->freitag;
+            $firma->samstag = $request->samstag;
+            $firma->bmontag = $request->bmontag;
+            $firma->bdienstag = $request->bdienstag;
+            $firma->bmittwoch = $request->bmittwoch;
+            $firma->bdonnerstag = $request->bdonnerstag;
+            $firma->bfreitag = $request->bfreitag;
+            $firma->bsamstag = $request->bsamstag;
 
             if ($firma->save()) {
                 toastr()->success('Die Firmendaten wurden gespeichert!', 'Erfolgreich gespeichert');

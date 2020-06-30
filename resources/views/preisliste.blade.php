@@ -31,7 +31,6 @@
 @endpush
 
 @section('content')
-
     <div style="background-color: #d3d3d3;">
         <div class="container">
             <div class="row">
@@ -63,7 +62,13 @@
                                             {{ $item->preiszusatz }}
                                         @endif
                                         @if($item->preis != 0.00)
-                                            {{ number_format($item->preis, 2, ',', '.').' €' }}
+                                            @if(date('2021.01.01') <= date('Y.m.d'))
+                                                    {{ number_format(round($item->preis * $prozent19, 2), 2, ',', '.').' €' }}
+                                            @endif
+                                            @if(date('2020.06.31') < date('Y.m.d'))
+                                                    <del>{{ number_format(round($item->preis * $prozent19, 2), 2, ',', '.').' €' }}</del>
+                                                {{ ' / '.number_format(round($item->preis * $prozent16, 2), 2, ',', '.').' €' }}
+                                            @endif
                                         @endif
                                         @if($item->preis == 0.00)
                                             {{ $item->preiszusatz }}
@@ -87,7 +92,14 @@
                                             {{ $item->preiszusatz }}
                                         @endif
                                         @if($item->preis != 0.00)
-                                            {{ number_format($item->preis, 2, ',', '.').' €' }}
+
+                                            @if(date('2021.01.01') <= date('Y.m.d'))
+                                                    {{ number_format(round($item->preis * $prozent19, 2), 2, ',', '.').' €' }}
+                                            @endif
+                                            @if(date('2020.06.31') < date('Y.m.d'))
+                                                    <del>{{ number_format(round($item->preis * $prozent19, 2), 2, ',', '.').' €' }}</del>
+                                                {{ ' / '.number_format(round($item->preis * $prozent16, 2), 2, ',', '.').' €' }}
+                                            @endif
                                         @endif
                                         @if($item->preis == 0.00)
                                             {{ $item->preiszusatz }}
@@ -111,7 +123,14 @@
                                             {{ $item->preiszusatz }}
                                         @endif
                                         @if($item->preis != 0.00)
-                                            {{ number_format($item->preis, 2, ',', '.').' €' }}
+
+                                            @if(date('2021.01.01') <= date('Y.m.d'))
+                                                    {{ number_format(round($item->preis * $prozent19, 2), 2, ',', '.').' €' }}
+                                            @endif
+                                            @if(date('2020.06.31') < date('Y.m.d'))
+                                                    <del>{{ number_format(round($item->preis * $prozent19, 2), 2, ',', '.').' €' }}</del>
+                                                {{ ' / '.number_format(round($item->preis * $prozent16, 2), 2, ',', '.').' €' }}
+                                            @endif
                                         @endif
                                         @if($item->preis == 0.00)
                                             {{ $item->preiszusatz }}
@@ -135,7 +154,14 @@
                                             {{ $item->preiszusatz }}
                                         @endif
                                         @if($item->preis != 0.00)
-                                            {{ number_format($item->preis, 2, ',', '.').' €' }}
+
+                                            @if(date('2021.01.01') <= date('Y.m.d'))
+                                                    {{ number_format(round($item->preis * $prozent19, 2), 2, ',', '.').' €' }}
+                                            @endif
+                                            @if(date('2020.06.31') < date('Y.m.d'))
+                                                    <del>{{ number_format(round($item->preis * $prozent19, 2), 2, ',', '.').' €' }}</del>
+                                                {{ ' / '.number_format(round($item->preis * $prozent16, 2), 2, ',', '.').' €' }}
+                                            @endif
                                         @endif
                                         @if($item->preis == 0.00)
                                             {{ $item->preiszusatz }}
@@ -159,7 +185,14 @@
                                             {{ $item->preiszusatz }}
                                         @endif
                                         @if($item->preis != 0.00)
-                                            {{ number_format($item->preis, 2, ',', '.').' €' }}
+
+                                            @if(date('2021.01.01') <= date('Y.m.d'))
+                                                    {{ number_format(round($item->preis * $prozent19, 2), 2, ',', '.').' €' }}
+                                            @endif
+                                            @if(date('2020.06.31') < date('Y.m.d'))
+                                                    <del>{{ number_format(round($item->preis * $prozent19, 2), 2, ',', '.').' €' }}</del>
+                                                {{ ' / '.number_format(round($item->preis * $prozent16, 2), 2, ',', '.').' €' }}
+                                            @endif
                                         @endif
                                         @if($item->preis == 0.00)
                                             {{ $item->preiszusatz }}
@@ -183,7 +216,14 @@
                                             {{ $item->preiszusatz }}
                                         @endif
                                         @if($item->preis != 0.00)
-                                            {{ number_format($item->preis, 2, ',', '.').' €' }}
+
+                                            @if(date('2021.01.01') <= date('Y.m.d'))
+                                                    {{ number_format(round($item->preis * $prozent19, 2), 2, ',', '.').' €' }}
+                                            @endif
+                                            @if(date('2020.06.31') < date('Y.m.d'))
+                                                    <del>{{ number_format(round($item->preis * $prozent19, 2), 2, ',', '.').' €' }}</del>
+                                                {{ ' / '.number_format(round($item->preis * $prozent16, 2), 2, ',', '.').' €' }}
+                                            @endif
                                         @endif
                                         @if($item->preis == 0.00)
                                             {{ $item->preiszusatz }}

@@ -1,5 +1,13 @@
 {
- "name": "App",
+ "name": "Mietwerkstatt Rossleben",
+ "short_name": "MwR",
+ "description": "Auf unserer Seite können sie ihr Auto zum Verkauf stellen, oder ein Termin in unserer Mietwerkstatt vereinbaren. Des Weiteren können sie bei uns ihre Service-Arbeiten am Fahrzeug durchführen lassen.",
+ "start_url": "/",
+ "theme_color": "#ff4400",
+ "scope": ".",
+ "display": "standalone",
+ "lang": "de-DE",
+ "dir": "ltr",
  "icons": [
   {
    "src": "\/android-icon-36x36.png",

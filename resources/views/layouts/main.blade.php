@@ -1,7 +1,7 @@
 <!doctype html>
 <?php
 session_cache_limiter('none');
-header('Cache-control: max-age='.(60*60*24*7)); //one week
+header('Cache-Control: max-age=31536000, public'); //one week
 header('Expires: '.gmdate(DATE_RFC1123,time()+60*60*24*365)); //one week
 ?>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">

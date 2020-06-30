@@ -21,38 +21,44 @@
             <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                 <h5>Links</h5>
                 <ul class="list-unstyled kontakt">
-                    <li><a href="{{ url('datenschutz') }}">Datenschutzerklärung</a></li>
-                    <li><a href="{{ url('impressum') }}">Impressum</a></li>
-                    <li><a href="{{ url('cookie') }}">Cookie Einstellungen</a></li>
+                    <li class="py-sm-2 py-md-0"><a href="{{ url('datenschutz') }}">Datenschutzerklärung</a></li>
+                    <li class="py-sm-2 py-md-0"><a href="{{ url('impressum') }}">Impressum</a></li>
+                    <li class="py-sm-2 py-md-0"><a href="{{ url('cookie') }}">Cookie Einstellungen</a></li>
                 </ul>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                <h5>Öffnungszeiten</h5>
+                <h5>Öffnungszeiten & Bürozeiten</h5>
                 @foreach(\Illuminate\Support\Facades\DB::table('backend_firmendaten')->get()->toArray() as $firma)
-                <table class="text-light kontakt d-inline-block">
+                <table class="text-light kontakt w-100">
                     <tr>
                         <td class="text-left">Montag:</td>
-                        <td>{{ $firma->montag.' Uhr' }}</td>
+                        <td>{{ $firma->montag }} @if($firma->bmontag == true) </td>
+                        <td class="float-right">{{ $firma->bmontag }} @endif</td>
                     </tr>
                     <tr>
                         <td class="text-left">Dienstag:
-                        <td>{{ $firma->dienstag.' Uhr' }}</td>
+                        <td>{{ $firma->dienstag }} @if($firma->bdienstag == true)</td>
+                        <td class="float-right"> {{ $firma->bdienstag }} @endif</td>
                     </tr>
                     <tr>
                         <td class="text-left">Mittwoch:
-                        <td>{{ $firma->mittwoch.' Uhr' }}</td>
+                        <td>{{ $firma->mittwoch }} @if($firma->bmittwoch == true)</td>
+                        <td class="float-right"> {{ $firma->bmittwoch }} @endif</td>
                     </tr>
                     <tr>
                         <td class="text-left">Donnerstag:
-                        <td>{{ $firma->donnerstag.' Uhr' }}</td>
+                        <td>{{ $firma->donnerstag }} @if($firma->bdonnerstag == true)</td>
+                        <td class="float-right"> {{ $firma->bdonnerstag }} @endif</td>
                     </tr>
                     <tr>
                         <td class="text-left">Freitag:
-                        <td>{{ $firma->freitag.' Uhr' }}</td>
+                        <td>{{ $firma->freitag }} @if($firma->bfreitag == true)</td>
+                        <td class="float-right"> {{ $firma->bfreitag }} @endif</td>
                     </tr>
                     <tr>
                         <td class="text-left">Samstag:
-                        <td>{{ $firma->samstag.' Uhr' }}</td>
+                        <td>{{ $firma->samstag }} @if($firma->bsamstag == true)</td>
+                        <td class="float-right"> {{ $firma->bsamstag }} @endif</td>
                     </tr>
                 </table>
                 @endforeach
