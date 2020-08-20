@@ -20,7 +20,7 @@
             <div class="col">
                 <div class="container-content border-0">
                     <div class="container-inner" id="impressum">
-                        <script id="CookieDeclaration" src="https://consent.cookiebot.com/128725df-59ff-4052-8e9a-14b16a997f90/cd.js" type="text/javascript" async></script>
+                        <script id="CookieDeclaration" src="https://consent.cookiebot.com/128725df-59ff-4052-8e9a-14b16a997f90/cd.js" type="text/javascript"></script>
                     </div>
                 </div>
             </div>

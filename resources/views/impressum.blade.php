@@ -64,14 +64,16 @@
 
                         <p>Sollten Sie auf dieser Webseite Inhalte finden, die das Urheberrecht verletzen, bitten wir Sie uns zu kontaktieren.</p>
 
-                        <div style="display: none;">
+                        <div>
                             <h3>Bildernachweis</h3>
                             <p>Die Bilder, Fotos und Grafiken auf dieser Webseite sind urheberrechtlich geschützt.</p>
 
                             <p>Die Bilderrechte liegen bei den folgenden Fotografen und Unternehmen:</p>
 
                             <ul>
-                                <li>Fotograf Mustermann</li>
+                                <li>Foto von icon0.com von Pexels</li>
+                                <li>Bild von <a href="https://pixabay.com/de/users/emkanicepic-7638451/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3230876" target="_blank">Michael Kauer</a> auf <a href="https://pixabay.com/de/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3230876" target="_blank">Pixabay</a></li>
+                                <li>Foto von <a href="https://www.pexels.com/de-de/@olly?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels" target="_blank">Andrea Piacquadio</a> von <a href="https://www.pexels.com/de-de/foto/gummi-stapel-warenhaus-bereifung-3806252/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels" target="_blank">Pexels</a></li>
                             </ul>
                         </div>
                         <p><strong>Quelle:</strong> Erstellt mit dem Datenschutz Generator von AdSimple in Kooperation mit <a href="//www.123familie.de">123familie.de</a> </p>

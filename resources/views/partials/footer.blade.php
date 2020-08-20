@@ -60,6 +60,15 @@
                         <td>{{ $firma->samstag }} @if($firma->bsamstag == true)</td>
                         <td class="float-right"> {{ $firma->bsamstag }} @endif</td>
                     </tr>
+                    <tr>
+                        <td colspan="3">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <p>Samstags sind wir nur an geraden KW vor Ort.<br>
+                                Außerhalb der Öffnungszeiten & Bürozeiten sind Termine nach Vereinbarung möglich.</p>
+                        </td>
+                    </tr>
                 </table>
                 @endforeach
             </div>

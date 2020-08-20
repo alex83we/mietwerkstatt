@@ -53,7 +53,7 @@ class ImageUpdateController extends Controller
             $nameToString = $images->images;
         }
 
-        $created_at = $images->created_at;
+        $created_at = $request->created_at;
 
         if ($request->vorschau != $request->imagesvorschau) {
             $images->verkauf_id = $request->verkauf_id;

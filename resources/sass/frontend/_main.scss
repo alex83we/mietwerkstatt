@@ -1,5 +1,5 @@
 body {
-    font-size: 0.875rem !important;
+    font-size: 1rem !important;
     line-height: 1.5 !important;
     color: #3E3F3A !important;
     background-color: #d6d7d8 !important;
@@ -27,7 +27,7 @@ a {
 }
 
 #footer {
-    position: absolute;
+    //position: absolute;
     bottom: 0;
     width: 100%;
     overflow: hidden;
@@ -211,12 +211,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .body-section {
-    padding-bottom: 480px;
+    padding-bottom: 50px;
 }
 
 @media only screen and (max-width: 768px) {
     .body-section {
-        padding-bottom: 780px;
+        padding-bottom: 50px;
     }
 }
 

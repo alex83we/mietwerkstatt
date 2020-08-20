@@ -63,10 +63,11 @@ header('Expires: '.gmdate(DATE_RFC1123,time()+60*60*24*365)); //one week
             @yield('content')
         </section>
 
-        <footer id="footer">
-            @include('partials.footer')
-        </footer>
+
     </div>
+    <footer id="footer">
+        @include('partials.footer')
+    </footer>
 </div>
 <!-- Scripts -->
 <script src="{{ asset('js/app.js') }}"></script>

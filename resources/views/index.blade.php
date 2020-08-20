@@ -64,7 +64,7 @@
     </div>
 
 
-    <div style="padding-bottom: 25px;">
+    {{--<div style="padding-bottom: 25px;">
         <div class="container">
             <div class="row">
                 <div class="col-12 py-4 text-center">
@@ -189,13 +189,13 @@
 
             </div><!-- row end -->
         </div><!-- Container end -->
-    </div>
+    </div>--}}
 
     <div style="background-color: #d3d3d3;">
         <div class="container" style="padding-top: 25px; padding-bottom: 25px;">
             @foreach(\Illuminate\Support\Facades\DB::table('backend_firmendaten')->get()->toArray() as $firma)
             <div class="row">
-                <div class="col-lg-12 col-xl-4 py-3" style="background-color: #ff4400; color: #ffffff; height: 346px;">
+                <div class="col-lg-12 col-xl-4 py-3" style="background-color: #ff4400; color: #ffffff;">
                     <h4 class="text-uppercase">so können sie uns erreichen.</h4>
                     <div class="pt-4 pb-2">
                             {{ $firma->firmenname }}<br>
@@ -245,6 +245,15 @@
                                 <td class="text-left">Samstag:
                                 <td>{{ $firma->samstag }} @if($firma->bsamstag == true)</td>
                                 <td class="float-right"> {{ $firma->bsamstag }} @endif</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">
+                                    <p>Samstags sind wir nur an geraden KW vor Ort.<br>
+                                        Außerhalb der Öffnungszeiten & Bürozeiten sind Termine nach Vereinbarung möglich.</p>
+                                </td>
                             </tr>
                             </tbody>
                         </table>

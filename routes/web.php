@@ -75,6 +75,26 @@ Route::get('/impressum', function () {
     return view('impressum');
 });
 
+// Preise
+Route::get('/hebebuehnen', function () {
+    return view('preise.hebebuehnen');
+});
+
+// Werkzeuge
+Route::get('/werkzeuge', function () {
+    return view('preise.werkzeuge');
+});
+
+// Reifendienst
+Route::get('/reifendienst', function () {
+    return view('preise.reifendienst');
+});
+
+// Reifen
+Route::get('/reifen', function () {
+    return view('reifen');
+});
+
 // Cookie
 Route::get('/cookie', function () {
     return view('cookie');
@@ -144,3 +164,4 @@ Route::get('robots.txt', function() {
 
     return response(Robots::generate(), 200)->header('Content-Type', 'text/plain');
 });
+
