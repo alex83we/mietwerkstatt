@@ -48,7 +48,7 @@
                         <div class="row my-3">
                             <div class="col-lg-5 mb-3 mb-lg-0">
                                 <div class="text-center" style="padding: 55px 0px;">
-                                    <img src="{{ url('images/preise/hebebuehne.png') }}" title="MIETWERKSTATT ROßLEBEN: Hebebühne" alt="MIETWERKSTATT ROßLEBEN: Hebebühne">
+                                    <img src="{{ url('images/preise/Hebebuehne.png') }}" title="MIETWERKSTATT ROßLEBEN: Hebebühne" alt="MIETWERKSTATT ROßLEBEN: Hebebühne">
                                 </div>
                             </div>
                             <div class="col-lg-7">

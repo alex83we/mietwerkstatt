@@ -75,23 +75,33 @@ Route::get('/impressum', function () {
     return view('impressum');
 });
 
+// AGB
+Route::get('/agb', function () {
+    return view('agb');
+});
+
+// Hausordnung
+Route::get('/hausordnung', function () {
+    return view('hausordnung');
+});
+
 // Preise
-Route::get('/hebebuehnen', function () {
+Route::get('preise/hebebuehnen', function () {
     return view('preise.hebebuehnen');
 });
 
 // Werkzeuge
-Route::get('/werkzeuge', function () {
+Route::get('preise/werkzeuge', function () {
     return view('preise.werkzeuge');
 });
 
 // Reifendienst
-Route::get('/reifendienst', function () {
+Route::get('preise/reifendienst', function () {
     return view('preise.reifendienst');
 });
 
 // Reifen
-Route::get('/reifen', function () {
+Route::get('/tyres', function () {
     return view('reifen');
 });
 

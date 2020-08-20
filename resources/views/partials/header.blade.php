@@ -17,18 +17,18 @@
             <li class="nav-item {{ Request::is('ankauf*') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ url('ankauf') }}">Fahrzeugankauf</a>
             </li>--}}
-            <li class="nav-item {{ Request::is('werkstatt*') ? 'active' : '' }}">
-                <a class="nav-link" href="{{ url('werkstatt') }}">Mietwerkstatt</a>
+            <li class="nav-item">
+                <a class="nav-link {{ Request::is('werkstatt*') ? 'active' : '' }}" href="{{ url('werkstatt') }}">Mietwerkstatt</a>
             </li>
-            <li class="nav-item {{ Request::is('reifen*') ? 'active' : '' }}">
-                <a class="nav-link" href="{{ url('reifen') }}">Reifen</a>
+            <li class="nav-item">
+                <a class="nav-link {{ Request::is('tyres') ? 'active' : '' }}" href="{{ url('tyres') }}">Reifen</a>
             </li>
-            <li class="nav-item dropdown {{ Request::is('preisliste*') ? 'active' : '' }}">
+            <li class="nav-item dropdown {{ Request::is('preise*') ? 'active' : '' }}">
                 <a id="navbarPreise" class="nav-link" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>Preise</a>
                 <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarPreise">
-                    <a class="dropdown-item" href="{{ url('hebebuehnen') }}">Hebebühnen</a>
-                    <a class="dropdown-item" href="{{ url('werkzeuge') }}">Werkzeuge</a>
-                    <a class="dropdown-item" href="{{ url('reifendienst') }}">Reifendienst</a>
+                    <a class="dropdown-item {{ Request::is('preise/hebebuehnen') ? 'active' : '' }}" href="{{ url('preise/hebebuehnen') }}">Hebebühnen</a>
+                    <a class="dropdown-item {{ Request::is('preise/werkzeuge') ? 'active' : '' }}" href="{{ url('preise/werkzeuge') }}">Werkzeuge</a>
+                    <a class="dropdown-item {{ Request::is('preise/reifendienst') ? 'active' : '' }}" href="{{ url('preise/reifendienst') }}">Reifendienst</a>
                 </div>
             </li>
             <li class="nav-item {{ Request::is('kontakt*') ? 'active' : '' }}">

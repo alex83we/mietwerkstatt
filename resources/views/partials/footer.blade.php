@@ -23,6 +23,8 @@
                 <ul class="list-unstyled kontakt">
                     <li class="py-sm-2 py-md-0"><a href="{{ url('datenschutz') }}">Datenschutzerklärung</a></li>
                     <li class="py-sm-2 py-md-0"><a href="{{ url('impressum') }}">Impressum</a></li>
+                    <li class="py-sm-2 py-md-0"><a href="{{ url('agb') }}">AGB</a></li>
+                    <li class="py-sm-2 py-md-0"><a href="{{ url('hausordnung') }}">Hausordnung</a></li>
                     <li class="py-sm-2 py-md-0"><a href="{{ url('cookie') }}">Cookie Einstellungen</a></li>
                 </ul>
             </div>
