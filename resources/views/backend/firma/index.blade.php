@@ -321,12 +321,17 @@
                                                 </span>
                                             @enderror
                                         </div>
-                                        <div class="col-sm-6"></div>
+										<div class="col-sm-1"></div>
+										<div class="col-sm-5">
+											<button type="submit" class="btn btn-sm btn-block btn-outline-orange">
+												Speichern
+											</button>
+										</div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="card-header bg-dark rounded-0">Bürozeiten</div>
-                            <div class="card-body">
+                            {{--<div class="card-header bg-dark rounded-0">Bürozeiten</div>--}}
+                            {{--<div class="card-body">
                                 <div class="form-group">
                                     <div class="row">
                                         <label for="montag" class="col-form-label col-sm-1 pt-0">Montag</label>
@@ -413,7 +418,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div>--}}
                         </div>
                     </form>
                 </div>

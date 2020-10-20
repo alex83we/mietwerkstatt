@@ -212,7 +212,7 @@
                     </div>
                 </div>
                 <div class="col-lg-12 col-xl-4 py-3" style="background-color: #404040; color: #ffffff">
-                    <h5>Öffnungszeiten & Bürozeiten</h5>
+                    <h5>Öffnungszeiten</h5>
                     <div class="pt-4 pb-2">
                         <table class="w-100">
                             <tbody>
@@ -252,7 +252,7 @@
                             <tr>
                                 <td colspan="3">
                                     <p>Samstags sind wir nur an geraden KW vor Ort.<br>
-                                        Außerhalb der Öffnungszeiten & Bürozeiten sind Termine nach Vereinbarung möglich.</p>
+                                        Außerhalb der Öffnungszeiten sind Termine nach Vereinbarung möglich.</p>
                                 </td>
                             </tr>
                             </tbody>
@@ -271,6 +271,12 @@
                             <tr>
                                 <td>Reparaturannahme:</td>
                                 <td>{{ $firma->mobil }}</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">Außerhalb der Öffnungszeiten stehen wir ihnen Montag - Freitags von 09:00 - 19:00 Uhr telefonisch zur Verfügung.</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">Das Büro ist Montag und Mittwoch von 15:30 - 17:00 Uhr besetzt und in jeder geraden KW Samstags von 10:00 - 15:00 Uhr</td>
                             </tr>
                             </tbody>
                         </table>

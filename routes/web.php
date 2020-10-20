@@ -30,7 +30,6 @@ Route::get('sitemap', function () {
 });
 
 Auth::routes();
-Auth::routes(['verify' => true]);
 
 // Profil
 Route::get('/profil/{id}', 'Frontend\ProfilController@index')->name('profil.index');
@@ -43,20 +42,20 @@ Route::post('/passwort-aendern', 'Frontend\ChangePasswordController@store')->nam
 
 // Fahrzeugverkauf
 Route::get('/', 'Frontend\Fahrzeuge\VerkaufController@index')->name('verkauf.index');
-Route::resource('/verkauf', 'Frontend\Fahrzeuge\VerkaufController', ['except' => ['index', 'edit', 'update', 'destroy']]);
+/*Route::resource('/verkauf', 'Frontend\Fahrzeuge\VerkaufController', ['except' => ['index', 'edit', 'update', 'destroy']]);
 Route::post('/verkauf/anfrage', 'Frontend\FahrzeugAnfrageController@store')->name('verkauf.anfrage');
 Route::get('/verkauf/pdf/{id}', 'Frontend\Fahrzeuge\PDFController@generatePDF')->name('verkauf.pdf');
-Route::get('/verkauf/{id}/modell', 'Frontend\Fahrzeuge\VerkaufController@getModell');
+Route::get('/verkauf/{id}/modell', 'Frontend\Fahrzeuge\VerkaufController@getModell');*/
 
 
 // Fahrzeugsuche
-Route::get('/suche', 'Frontend\Fahrzeuge\SearchController@index')->name('verkauf.search');
+/*Route::get('/suche', 'Frontend\Fahrzeuge\SearchController@index')->name('verkauf.search');
 Route::get('/suche/search', 'Frontend\Fahrzeuge\SearchController@search');
-Route::get('/suche/{marke}/marke', 'Frontend\Fahrzeuge\SearchController@getModell');
+Route::get('/suche/{marke}/marke', 'Frontend\Fahrzeuge\SearchController@getModell');*/
 
 // Fahrzeugankauf
-Route::resource('/ankauf', 'Frontend\AnkaufController', ['except' => ['show', 'create', 'edit', 'update', 'destroy']]);
-Route::get('ankauf/{id}/marke', 'Frontend\AnkaufController@getModell');
+/*Route::resource('/ankauf', 'Frontend\AnkaufController', ['except' => ['show', 'create', 'edit', 'update', 'destroy']]);
+Route::get('ankauf/{id}/marke', 'Frontend\AnkaufController@getModell');*/
 
 
 // Kontakt

@@ -2,67 +2,97 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
         <loc>https://www.mietwerkstatt-rossleben.de</loc>
-        <lastmod>2020-06-12T06:25:55+02:00</lastmod>
+        <lastmod>2020-10-20T11:13:28+02:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.mietwerkstatt-rossleben.de/</loc>
-        <lastmod>2020-06-12T06:25:55+02:00</lastmod>
+        <lastmod>2020-10-20T11:13:28+02:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.mietwerkstatt-rossleben.de/ankauf</loc>
-        <lastmod>2020-06-12T06:25:56+02:00</lastmod>
+        <loc>https://www.mietwerkstatt-rossleben.de/agb</loc>
+        <lastmod>2020-10-20T11:13:28+02:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.mietwerkstatt-rossleben.de/cookie</loc>
-        <lastmod>2020-06-12T06:25:56+02:00</lastmod>
+        <lastmod>2020-10-20T11:13:28+02:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.mietwerkstatt-rossleben.de/datenschutz</loc>
-        <lastmod>2020-06-12T06:25:56+02:00</lastmod>
+        <lastmod>2020-10-20T11:13:28+02:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.mietwerkstatt-rossleben.de/docs/preisliste.pdf</loc>
+        <lastmod>2020-10-20T11:13:28+02:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.mietwerkstatt-rossleben.de/hausordnung</loc>
+        <lastmod>2020-10-20T11:13:28+02:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.mietwerkstatt-rossleben.de/impressum</loc>
-        <lastmod>2020-06-12T06:25:56+02:00</lastmod>
+        <lastmod>2020-10-20T11:13:28+02:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.mietwerkstatt-rossleben.de/kontakt</loc>
-        <lastmod>2020-06-12T06:25:56+02:00</lastmod>
+        <lastmod>2020-10-20T11:13:28+02:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.mietwerkstatt-rossleben.de/login</loc>
-        <lastmod>2020-06-12T06:25:56+02:00</lastmod>
+        <lastmod>2020-10-20T11:13:28+02:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.mietwerkstatt-rossleben.de/preisliste</loc>
-        <lastmod>2020-06-12T06:25:56+02:00</lastmod>
+        <loc>https://www.mietwerkstatt-rossleben.de/password/reset</loc>
+        <lastmod>2020-10-20T11:13:28+02:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.mietwerkstatt-rossleben.de/suche</loc>
-        <lastmod>2020-06-12T06:25:56+02:00</lastmod>
+        <loc>https://www.mietwerkstatt-rossleben.de/preise/hebebuehnen</loc>
+        <lastmod>2020-10-20T11:13:28+02:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.mietwerkstatt-rossleben.de/preise/reifendienst</loc>
+        <lastmod>2020-10-20T11:13:28+02:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.mietwerkstatt-rossleben.de/preise/werkzeuge</loc>
+        <lastmod>2020-10-20T11:13:28+02:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.mietwerkstatt-rossleben.de/tyres</loc>
+        <lastmod>2020-10-20T11:13:28+02:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.mietwerkstatt-rossleben.de/werkstatt</loc>
-        <lastmod>2020-06-12T06:25:56+02:00</lastmod>
+        <lastmod>2020-10-20T11:13:28+02:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
     </url>
