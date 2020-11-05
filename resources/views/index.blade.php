@@ -276,7 +276,7 @@
                                 <td colspan="2">Außerhalb der Öffnungszeiten stehen wir ihnen Montag - Freitags von 09:00 - 19:00 Uhr telefonisch zur Verfügung.</td>
                             </tr>
                             <tr>
-                                <td colspan="2">Das Büro ist Montag und Mittwoch von 15:30 - 17:00 Uhr besetzt und in jeder geraden KW Samstags von 10:00 - 15:00 Uhr</td>
+                                <td colspan="2">Das Büro ist Montag und Mittwoch von 15:30 - 17:00 Uhr besetzt und in jeder geraden KW Samstags von 10:00 - 13:00 Uhr</td>
                             </tr>
                             </tbody>
                         </table>

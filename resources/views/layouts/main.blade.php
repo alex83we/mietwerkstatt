@@ -50,6 +50,7 @@ header('Expires: '.gmdate(DATE_RFC1123,time()+60*60*24*365)); //one week
     @stack('css')
 </head>
 <body>
+<div id="load"></div>
 <!-- Google Tag Manager (noscript) -->
 <noscript>
     <iframe src="//www.googletagmanager.com/ns.html?id=GTM-TTG7CXS" height="0" width="0" style="display:none;visibility:hidden"></iframe>
