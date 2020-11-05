@@ -56,7 +56,7 @@ header('Expires: '.gmdate(DATE_RFC1123,time()+60*60*24*365)); //one week
     <iframe src="//www.googletagmanager.com/ns.html?id=GTM-TTG7CXS" height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </noscript>
 <!-- End Google Tag Manager (noscript) -->
-<div id="app">
+{{--<div id="app">--}}
     <div id="page-container">
         @include('partials.header')
 
@@ -69,7 +69,7 @@ header('Expires: '.gmdate(DATE_RFC1123,time()+60*60*24*365)); //one week
     <footer id="footer">
         @include('partials.footer')
     </footer>
-</div>
+{{--</div>--}}
 <!-- Scripts -->
 <script src="{{ asset('js/app.js') }}"></script>
 <script src="{{ asset('js/share.js') }}"></script>
