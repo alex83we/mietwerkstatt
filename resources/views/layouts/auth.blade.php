@@ -15,7 +15,7 @@
         window.Laravel = <?php echo json_encode(['csrfToken' => csrf_token(),]); ?>
     </script>
 
-    <! - Dadurch wird die ID des aktuellen Benutzers in Javascript verfügbar ->
+    <!-- Dadurch wird die ID des aktuellen Benutzers in Javascript verfügbar -->
     @if(!auth()->guest())
         <script>
             window.Laravel.userId = <?php echo auth()->user()->id; ?>
@@ -43,11 +43,12 @@
     @stack('css')
 </head>
 <body>
+<div id="load"></div>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TTG7CXS"
                   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-<div id="app">
+<!-- <div id="app"> -->
     <div id="page-container">
 {{--        @include('partials.header')--}}
 
@@ -59,7 +60,7 @@
             @include('partials.footer')
         </footer>--}}
     </div>
-</div>
+<!-- </div> -->
 <!-- Scripts -->
 <script src="{{ asset('js/app.js') }}"></script>
 {{--@jquery--}}
