@@ -55,7 +55,7 @@
                         <li>Öl-Service</li>
                         <li>Reifenservice</li>
                         <li>KFZ Teileverkauf</li>
-                        <li>KFZ An- & Verkauf</li>
+                        <!-- <li>KFZ An- & Verkauf</li> -->
                     </ul>
                 </div>
 
