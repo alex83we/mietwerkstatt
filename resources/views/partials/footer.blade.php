@@ -14,7 +14,7 @@
                         <li>{{ 'Telefon: '.$firma->mobil }}</li>
                         <li>{{ 'Telefax: '.$firma->fax }}</li>
                         <li>&nbsp;</li>
-                        <li>{{ 'E-Mail: '.$firma->email }}</li>
+                        <li>{{ 'E-Mail: '.str_replace("@", "[at]", $firma->email) }}</li>
                     @endforeach
                 </ul>
             </div>

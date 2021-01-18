@@ -32,7 +32,7 @@
                             {{ 'Telefon: '.$firma->mobil }}<br>
                             {{ 'Telefax: '.$firma->fax }}<br>
                             <br>
-                            {{ 'E-Mail: '.$firma->email }}</p>
+                            {{ 'E-Mail: '.str_replace("@", "[at]", $firma->email) }}</p>
                         @endforeach
                         <h3>Aufsichtsbehörde</h3>
                         <p>Der Thüringer Landesbeauftragte für den Datenschutz (TLFD)<br>

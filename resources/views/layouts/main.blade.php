@@ -11,6 +11,7 @@ header('Expires: '.gmdate(DATE_RFC1123,time()+60*60*24*365)); //one week
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="application-name" content="Mietwerkstatt Ro&#xDF;leben">
     @yield('canonical')
     @yield('meta')
     @include('partials.meta')
@@ -48,9 +49,22 @@ header('Expires: '.gmdate(DATE_RFC1123,time()+60*60*24*365)); //one week
         })(window,document,'script','dataLayer','GTM-TTG7CXS');</script>
     <!-- End Google Tag Manager -->
     @stack('css')
+    <style>
+        .blinkklasse {
+            animation: blink 1s linear infinite;
+        }
+
+        @keyframes blink {
+            0%, 50% {
+                opacity: 0;
+            }
+            50.01%, 100% {
+                opacity: 1;
+            }
+        }
+    </style>
 </head>
 <body>
-<div id="load"></div>
 <!-- Google Tag Manager (noscript) -->
 <noscript>
     <iframe src="//www.googletagmanager.com/ns.html?id=GTM-TTG7CXS" height="0" width="0" style="display:none;visibility:hidden"></iframe>
@@ -59,7 +73,13 @@ header('Expires: '.gmdate(DATE_RFC1123,time()+60*60*24*365)); //one week
 {{--<div id="app">--}}
     <div id="page-container">
         @include('partials.header')
-
+        @if(true)
+        <div class="alert alert-danger text-center" role="alert">
+            Aufgrund von COVID-19 können unsere Öffnungszeiten abweichen.<br>
+            Vorherige telefonische Terminvereinbarung möglich.<br>
+            Vor Ort gilt die <span id="blink" class="blinkklasse"><b>Maskenpflicht</b></span>.
+        </div>
+        @endif
         <section class="body-section">
             @yield('content')
         </section>

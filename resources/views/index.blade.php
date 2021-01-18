@@ -55,7 +55,7 @@
                         <li>Öl-Service</li>
                         <li>Reifenservice</li>
                         <li>KFZ Teileverkauf</li>
-                        <li>KFZ An- & Verkauf</li>
+                        <!-- <li>KFZ An- & Verkauf</li> -->
                     </ul>
                 </div>
 
@@ -207,7 +207,21 @@
                             {{ 'Telefon: '.$firma->mobil }}<br>
                             {{ 'Telefax: '.$firma->fax }}<br>
                             <br>
-                            {{ 'E-Mail: '.$firma->email }}<br>
+{{--                            {{ 'E-Mail: '.$firma->email }}<br>--}}
+                        @php
+                            function no_spam($mail) {
+                                $str = "";
+                                $a = unpack("C*", $mail);
+                                foreach ($a as $b) {
+                                    $str .= sprintf("%%%X", $b);
+                                }
+                                return $str;
+                            }
+
+                            $mail = no_spam("info@mietwerkstatt-rossleben.de");
+                            $link = "<a href=mailto:$mail style='color: #FFFFFF;'>info(at)mietwerkstatt-rossleben.de</a>";
+                            echo 'E-Mail: '.$link;
+                        @endphp<br>
                             {{ 'Internet: '.$firma->www }}<br>
                     </div>
                 </div>
