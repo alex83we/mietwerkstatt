@@ -37230,9 +37230,8 @@ module.exports = function(module) {
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
-__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
+__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js"); // require('./loader');
 
-__webpack_require__(/*! ./loader */ "./resources/js/loader.js");
 /*window.Vue = require('vue');
 
 /!**
@@ -37305,27 +37304,6 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
 
-/***/ "./resources/js/loader.js":
-/*!********************************!*\
-  !*** ./resources/js/loader.js ***!
-  \********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-document.onreadystatechange = function () {
-  if (document.readyState !== "complete") {
-    document.querySelector('body').style.visibility = "hidden";
-    document.querySelector('#load').style.visibility = "visible";
-  } else {
-    document.querySelector('#load').style.visibility = "hidden";
-    document.querySelector('body').style.visibility = "visible";
-  }
-
-  ;
-};
-
-/***/ }),
-
 /***/ "./resources/sass/app.scss":
 /*!*********************************!*\
   !*** ./resources/sass/app.scss ***!
@@ -37355,9 +37333,9 @@ document.onreadystatechange = function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! I:\xampp\htdocs\mietwerkstatt\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! I:\xampp\htdocs\mietwerkstatt\resources\sass\app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! I:\xampp\htdocs\mietwerkstatt\resources\sass\backend.scss */"./resources/sass/backend.scss");
+__webpack_require__(/*! G:\xampp\htdocs\mietwerkstatt\resources\js\app.js */"./resources/js/app.js");
+__webpack_require__(/*! G:\xampp\htdocs\mietwerkstatt\resources\sass\app.scss */"./resources/sass/app.scss");
+module.exports = __webpack_require__(/*! G:\xampp\htdocs\mietwerkstatt\resources\sass\backend.scss */"./resources/sass/backend.scss");
 
 
 /***/ })

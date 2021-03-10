@@ -15,7 +15,6 @@
 @endpush
 
 @section('content')
-
     <div style="background-color: #d3d3d3;">
         <div class="container">
             <div class="row">
