@@ -40,7 +40,8 @@
                                 <br>
                                 <b>... und als kleines Extra</b>
                                 <br><br>
-                                <p>Wenn sie bei uns eine <a href="{{ route('preise/hebebuehnen') }}">Hebebühne mieten</a>, ist
+                                <p>Wenn sie bei uns eine <a href="{{ url('preise/hebebuehnen') }}">Hebebühne
+                                        mieten</a>, ist
                                     die Nutzung unseres Werkzeugkoffers im Mietpreis enthalten: Da ist das richtige Werkzeug immer dabei. Gutes Werkzeug - gute Arbeit!</p>
                                 <div class="text-right">
                                     <small>Alle Preise beinhalten die gesetzlichen MwSt.</small>
