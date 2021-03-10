@@ -41,7 +41,8 @@
                                 <b>Sonderwerkzeuge erforderlich?</b>
                                 <br><br>
                                 <p>Bei der Mietwerkstatt Roßleben kein Problem: Vom Schweißgerät über unseren Motorkran
-                                    bis hin zum Radlagerwerkzeug - Einfach mieten statt teueres <a href="{{ url('werkzeuge') }}">Werkzeug</a> selbst zu
+                                    bis hin zum Radlagerwerkzeug - Einfach mieten statt teueres <a href="{{ url
+                                    ('preise/werkzeuge') }}">Werkzeug</a> selbst zu
                                     kaufen!</p>
                             </div>
                         </div>
